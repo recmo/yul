@@ -1,0 +1,13 @@
+[package]
+name = "yul"
+version = "0.1.0"
+authors = ["Remco Bloemen <remco@wicked.ventures>"]
+edition = "2021"
+homepage = "https://github.com/recmo/yul"
+repository = "https://github.com/recmo/yul"
+description = "Yul language tools"
+categories = ["cryptography::cryptocurrencies"]
+keywords = ["ethereum", "yul", "compiler"]
+readme = "Readme.md"
+license = "MIT"
+

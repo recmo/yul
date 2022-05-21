@@ -1,0 +1,2446 @@
+Root@0..7136
+  File@0..7136
+    Object@0..7136
+      Object@0..6 "object"
+      Whitespace@6..7 " "
+      LiteralString@7..14 "\"Token\""
+      Whitespace@14..15 " "
+      BraceOpen@15..16 "{"
+      Whitespace@16..21 "\n    "
+      Code@21..244
+        Code@21..25 "code"
+        Whitespace@25..26 " "
+        Block@26..244
+          BraceOpen@26..27 "{"
+          Whitespace@27..36 "\n        "
+          LineComment@36..70 "// Store the creator  ..."
+          Whitespace@70..79 "\n        "
+          Statement@79..139
+            Expression@79..139
+              Call@79..139
+                Identifier@79..85 "sstore"
+                Arguments@85..139
+                  ParenOpen@85..86 "("
+                  Expression@86..87
+                    Literal@86..87
+                      LiteralInt@86..87 "0"
+                  Comma@87..88 ","
+                  Whitespace@88..89 " "
+                  Expression@89..97
+                    Call@89..97
+                      Identifier@89..95 "caller"
+                      Arguments@95..97
+                        ParenOpen@95..96 "("
+                        ParenClose@96..97 ")"
+                  ParenClose@97..98 ")"
+                  Whitespace@98..108 "\n\n        "
+                  LineComment@108..130 "// Deploy the contract"
+                  Whitespace@130..139 "\n        "
+          Statement@139..203
+            Expression@139..203
+              Call@139..203
+                Identifier@139..147 "datacopy"
+                Arguments@147..203
+                  ParenOpen@147..148 "("
+                  Expression@148..149
+                    Literal@148..149
+                      LiteralInt@148..149 "0"
+                  Comma@149..150 ","
+                  Whitespace@150..151 " "
+                  Expression@151..172
+                    Call@151..172
+                      Identifier@151..161 "dataoffset"
+                      Arguments@161..172
+                        ParenOpen@161..162 "("
+                        Expression@162..171
+                          Literal@162..171
+                            LiteralString@162..171 "\"runtime\""
+                        ParenClose@171..172 ")"
+                  Comma@172..173 ","
+                  Whitespace@173..174 " "
+                  Expression@174..193
+                    Call@174..193
+                      Identifier@174..182 "datasize"
+                      Arguments@182..193
+                        ParenOpen@182..183 "("
+                        Expression@183..192
+                          Literal@183..192
+                            LiteralString@183..192 "\"runtime\""
+                        ParenClose@192..193 ")"
+                  ParenClose@193..194 ")"
+                  Whitespace@194..203 "\n        "
+          Statement@203..238
+            Expression@203..238
+              Call@203..238
+                Identifier@203..209 "return"
+                Arguments@209..238
+                  ParenOpen@209..210 "("
+                  Expression@210..211
+                    Literal@210..211
+                      LiteralInt@210..211 "0"
+                  Comma@211..212 ","
+                  Whitespace@212..213 " "
+                  Expression@213..232
+                    Call@213..232
+                      Identifier@213..221 "datasize"
+                      Arguments@221..232
+                        ParenOpen@221..222 "("
+                        Expression@222..231
+                          Literal@222..231
+                            LiteralString@222..231 "\"runtime\""
+                        ParenClose@231..232 ")"
+                  ParenClose@232..233 ")"
+                  Whitespace@233..238 "\n    "
+          BraceClose@238..239 "}"
+          Whitespace@239..244 "\n    "
+      Object@244..7134
+        Object@244..250 "object"
+        Whitespace@250..251 " "
+        LiteralString@251..260 "\"runtime\""
+        Whitespace@260..261 " "
+        BraceOpen@261..262 "{"
+        Whitespace@262..271 "\n        "
+        Code@271..7132
+          Code@271..275 "code"
+          Whitespace@275..276 " "
+          Block@276..7132
+            BraceOpen@276..277 "{"
+            Whitespace@277..290 "\n            "
+            LineComment@290..325 "// Protection against ..."
+            Whitespace@325..338 "\n            "
+            Statement@338..406
+              Expression@338..406
+                Call@338..406
+                  Identifier@338..345 "require"
+                  Arguments@345..406
+                    ParenOpen@345..346 "("
+                    Expression@346..365
+                      Call@346..365
+                        Identifier@346..352 "iszero"
+                        Arguments@352..365
+                          ParenOpen@352..353 "("
+                          Expression@353..364
+                            Call@353..364
+                              Identifier@353..362 "callvalue"
+                              Arguments@362..364
+                                ParenOpen@362..363 "("
+                                ParenClose@363..364 ")"
+                          ParenClose@364..365 ")"
+                    ParenClose@365..366 ")"
+                    Whitespace@366..380 "\n\n            "
+                    LineComment@380..393 "// Dispatcher"
+                    Whitespace@393..406 "\n            "
+            Statement@406..1598
+              Switch@406..1598
+                Switch@406..412 "switch"
+                Whitespace@412..413 " "
+                Expression@413..436
+                  Call@413..436
+                    Identifier@413..421 "selector"
+                    Arguments@421..436
+                      ParenOpen@421..422 "("
+                      ParenClose@422..423 ")"
+                      Whitespace@423..436 "\n            "
+                Case@436..565
+                  Case@436..440 "case"
+                  Whitespace@440..441 " "
+                  Expression@441..479
+                    Literal@441..479
+                      LiteralHex@441..451 "0x70a08231"
+                      Whitespace@451..452 " "
+                      BlockComment@452..478 "/* \"balanceOf(address ..."
+                      Whitespace@478..479 " "
+                  Block@479..565
+                    BraceOpen@479..480 "{"
+                    Whitespace@480..497 "\n                "
+                    Statement@497..551
+                      Expression@497..551
+                        Call@497..551
+                          Identifier@497..507 "returnUint"
+                          Arguments@507..551
+                            ParenOpen@507..508 "("
+                            Expression@508..537
+                              Call@508..537
+                                Identifier@508..517 "balanceOf"
+                                Arguments@517..537
+                                  ParenOpen@517..518 "("
+                                  Expression@518..536
+                                    Call@518..536
+                                      Identifier@518..533 "decodeAsAddress"
+                                      Arguments@533..536
+                                        ParenOpen@533..534 "("
+                                        Expression@534..535
+                                          Literal@534..535
+                                            LiteralInt@534..535 "0"
+                                        ParenClose@535..536 ")"
+                                  ParenClose@536..537 ")"
+                            ParenClose@537..538 ")"
+                            Whitespace@538..551 "\n            "
+                    BraceClose@551..552 "}"
+                    Whitespace@552..565 "\n            "
+                Case@565..673
+                  Case@565..569 "case"
+                  Whitespace@569..570 " "
+                  Expression@570..603
+                    Literal@570..603
+                      LiteralHex@570..580 "0x18160ddd"
+                      Whitespace@580..581 " "
+                      BlockComment@581..602 "/* \"totalSupply()\" */"
+                      Whitespace@602..603 " "
+                  Block@603..673
+                    BraceOpen@603..604 "{"
+                    Whitespace@604..621 "\n                "
+                    Statement@621..659
+                      Expression@621..659
+                        Call@621..659
+                          Identifier@621..631 "returnUint"
+                          Arguments@631..659
+                            ParenOpen@631..632 "("
+                            Expression@632..645
+                              Call@632..645
+                                Identifier@632..643 "totalSupply"
+                                Arguments@643..645
+                                  ParenOpen@643..644 "("
+                                  ParenClose@644..645 ")"
+                            ParenClose@645..646 ")"
+                            Whitespace@646..659 "\n            "
+                    BraceClose@659..660 "}"
+                    Whitespace@660..673 "\n            "
+                Case@673..842
+                  Case@673..677 "case"
+                  Whitespace@677..678 " "
+                  Expression@678..723
+                    Literal@678..723
+                      LiteralHex@678..688 "0xa9059cbb"
+                      Whitespace@688..689 " "
+                      BlockComment@689..722 "/* \"transfer(address, ..."
+                      Whitespace@722..723 " "
+                  Block@723..842
+                    BraceOpen@723..724 "{"
+                    Whitespace@724..741 "\n                "
+                    Statement@741..803
+                      Expression@741..803
+                        Call@741..803
+                          Identifier@741..749 "transfer"
+                          Arguments@749..803
+                            ParenOpen@749..750 "("
+                            Expression@750..768
+                              Call@750..768
+                                Identifier@750..765 "decodeAsAddress"
+                                Arguments@765..768
+                                  ParenOpen@765..766 "("
+                                  Expression@766..767
+                                    Literal@766..767
+                                      LiteralInt@766..767 "0"
+                                  ParenClose@767..768 ")"
+                            Comma@768..769 ","
+                            Whitespace@769..770 " "
+                            Expression@770..785
+                              Call@770..785
+                                Identifier@770..782 "decodeAsUint"
+                                Arguments@782..785
+                                  ParenOpen@782..783 "("
+                                  Expression@783..784
+                                    Literal@783..784
+                                      LiteralInt@783..784 "1"
+                                  ParenClose@784..785 ")"
+                            ParenClose@785..786 ")"
+                            Whitespace@786..803 "\n                "
+                    Statement@803..828
+                      Expression@803..828
+                        Call@803..828
+                          Identifier@803..813 "returnTrue"
+                          Arguments@813..828
+                            ParenOpen@813..814 "("
+                            ParenClose@814..815 ")"
+                            Whitespace@815..828 "\n            "
+                    BraceClose@828..829 "}"
+                    Whitespace@829..842 "\n            "
+                Case@842..1047
+                  Case@842..846 "case"
+                  Whitespace@846..847 " "
+                  Expression@847..904
+                    Literal@847..904
+                      LiteralHex@847..857 "0x23b872dd"
+                      Whitespace@857..858 " "
+                      BlockComment@858..903 "/* \"transferFrom(addr ..."
+                      Whitespace@903..904 " "
+                  Block@904..1047
+                    BraceOpen@904..905 "{"
+                    Whitespace@905..922 "\n                "
+                    Statement@922..1008
+                      Expression@922..1008
+                        Call@922..1008
+                          Identifier@922..934 "transferFrom"
+                          Arguments@934..1008
+                            ParenOpen@934..935 "("
+                            Expression@935..953
+                              Call@935..953
+                                Identifier@935..950 "decodeAsAddress"
+                                Arguments@950..953
+                                  ParenOpen@950..951 "("
+                                  Expression@951..952
+                                    Literal@951..952
+                                      LiteralInt@951..952 "0"
+                                  ParenClose@952..953 ")"
+                            Comma@953..954 ","
+                            Whitespace@954..955 " "
+                            Expression@955..973
+                              Call@955..973
+                                Identifier@955..970 "decodeAsAddress"
+                                Arguments@970..973
+                                  ParenOpen@970..971 "("
+                                  Expression@971..972
+                                    Literal@971..972
+                                      LiteralInt@971..972 "1"
+                                  ParenClose@972..973 ")"
+                            Comma@973..974 ","
+                            Whitespace@974..975 " "
+                            Expression@975..990
+                              Call@975..990
+                                Identifier@975..987 "decodeAsUint"
+                                Arguments@987..990
+                                  ParenOpen@987..988 "("
+                                  Expression@988..989
+                                    Literal@988..989
+                                      LiteralInt@988..989 "2"
+                                  ParenClose@989..990 ")"
+                            ParenClose@990..991 ")"
+                            Whitespace@991..1008 "\n                "
+                    Statement@1008..1033
+                      Expression@1008..1033
+                        Call@1008..1033
+                          Identifier@1008..1018 "returnTrue"
+                          Arguments@1018..1033
+                            ParenOpen@1018..1019 "("
+                            ParenClose@1019..1020 ")"
+                            Whitespace@1020..1033 "\n            "
+                    BraceClose@1033..1034 "}"
+                    Whitespace@1034..1047 "\n            "
+                Case@1047..1214
+                  Case@1047..1051 "case"
+                  Whitespace@1051..1052 " "
+                  Expression@1052..1096
+                    Literal@1052..1096
+                      LiteralHex@1052..1062 "0x095ea7b3"
+                      Whitespace@1062..1063 " "
+                      BlockComment@1063..1095 "/* \"approve(address,u ..."
+                      Whitespace@1095..1096 " "
+                  Block@1096..1214
+                    BraceOpen@1096..1097 "{"
+                    Whitespace@1097..1114 "\n                "
+                    Statement@1114..1175
+                      Expression@1114..1175
+                        Call@1114..1175
+                          Identifier@1114..1121 "approve"
+                          Arguments@1121..1175
+                            ParenOpen@1121..1122 "("
+                            Expression@1122..1140
+                              Call@1122..1140
+                                Identifier@1122..1137 "decodeAsAddress"
+                                Arguments@1137..1140
+                                  ParenOpen@1137..1138 "("
+                                  Expression@1138..1139
+                                    Literal@1138..1139
+                                      LiteralInt@1138..1139 "0"
+                                  ParenClose@1139..1140 ")"
+                            Comma@1140..1141 ","
+                            Whitespace@1141..1142 " "
+                            Expression@1142..1157
+                              Call@1142..1157
+                                Identifier@1142..1154 "decodeAsUint"
+                                Arguments@1154..1157
+                                  ParenOpen@1154..1155 "("
+                                  Expression@1155..1156
+                                    Literal@1155..1156
+                                      LiteralInt@1155..1156 "1"
+                                  ParenClose@1156..1157 ")"
+                            ParenClose@1157..1158 ")"
+                            Whitespace@1158..1175 "\n                "
+                    Statement@1175..1200
+                      Expression@1175..1200
+                        Call@1175..1200
+                          Identifier@1175..1185 "returnTrue"
+                          Arguments@1185..1200
+                            ParenOpen@1185..1186 "("
+                            ParenClose@1186..1187 ")"
+                            Whitespace@1187..1200 "\n            "
+                    BraceClose@1200..1201 "}"
+                    Whitespace@1201..1214 "\n            "
+                Case@1214..1371
+                  Case@1214..1218 "case"
+                  Whitespace@1218..1219 " "
+                  Expression@1219..1265
+                    Literal@1219..1265
+                      LiteralHex@1219..1229 "0xdd62ed3e"
+                      Whitespace@1229..1230 " "
+                      BlockComment@1230..1264 "/* \"allowance(address ..."
+                      Whitespace@1264..1265 " "
+                  Block@1265..1371
+                    BraceOpen@1265..1266 "{"
+                    Whitespace@1266..1283 "\n                "
+                    Statement@1283..1357
+                      Expression@1283..1357
+                        Call@1283..1357
+                          Identifier@1283..1293 "returnUint"
+                          Arguments@1293..1357
+                            ParenOpen@1293..1294 "("
+                            Expression@1294..1343
+                              Call@1294..1343
+                                Identifier@1294..1303 "allowance"
+                                Arguments@1303..1343
+                                  ParenOpen@1303..1304 "("
+                                  Expression@1304..1322
+                                    Call@1304..1322
+                                      Identifier@1304..1319 "decodeAsAddress"
+                                      Arguments@1319..1322
+                                        ParenOpen@1319..1320 "("
+                                        Expression@1320..1321
+                                          Literal@1320..1321
+                                            LiteralInt@1320..1321 "0"
+                                        ParenClose@1321..1322 ")"
+                                  Comma@1322..1323 ","
+                                  Whitespace@1323..1324 " "
+                                  Expression@1324..1342
+                                    Call@1324..1342
+                                      Identifier@1324..1339 "decodeAsAddress"
+                                      Arguments@1339..1342
+                                        ParenOpen@1339..1340 "("
+                                        Expression@1340..1341
+                                          Literal@1340..1341
+                                            LiteralInt@1340..1341 "1"
+                                        ParenClose@1341..1342 ")"
+                                  ParenClose@1342..1343 ")"
+                            ParenClose@1343..1344 ")"
+                            Whitespace@1344..1357 "\n            "
+                    BraceClose@1357..1358 "}"
+                    Whitespace@1358..1371 "\n            "
+                Case@1371..1532
+                  Case@1371..1375 "case"
+                  Whitespace@1375..1376 " "
+                  Expression@1376..1417
+                    Literal@1376..1417
+                      LiteralHex@1376..1386 "0x40c10f19"
+                      Whitespace@1386..1387 " "
+                      BlockComment@1387..1416 "/* \"mint(address,uint ..."
+                      Whitespace@1416..1417 " "
+                  Block@1417..1532
+                    BraceOpen@1417..1418 "{"
+                    Whitespace@1418..1435 "\n                "
+                    Statement@1435..1493
+                      Expression@1435..1493
+                        Call@1435..1493
+                          Identifier@1435..1439 "mint"
+                          Arguments@1439..1493
+                            ParenOpen@1439..1440 "("
+                            Expression@1440..1458
+                              Call@1440..1458
+                                Identifier@1440..1455 "decodeAsAddress"
+                                Arguments@1455..1458
+                                  ParenOpen@1455..1456 "("
+                                  Expression@1456..1457
+                                    Literal@1456..1457
+                                      LiteralInt@1456..1457 "0"
+                                  ParenClose@1457..1458 ")"
+                            Comma@1458..1459 ","
+                            Whitespace@1459..1460 " "
+                            Expression@1460..1475
+                              Call@1460..1475
+                                Identifier@1460..1472 "decodeAsUint"
+                                Arguments@1472..1475
+                                  ParenOpen@1472..1473 "("
+                                  Expression@1473..1474
+                                    Literal@1473..1474
+                                      LiteralInt@1473..1474 "1"
+                                  ParenClose@1474..1475 ")"
+                            ParenClose@1475..1476 ")"
+                            Whitespace@1476..1493 "\n                "
+                    Statement@1493..1518
+                      Expression@1493..1518
+                        Call@1493..1518
+                          Identifier@1493..1503 "returnTrue"
+                          Arguments@1503..1518
+                            ParenOpen@1503..1504 "("
+                            ParenClose@1504..1505 ")"
+                            Whitespace@1505..1518 "\n            "
+                    BraceClose@1518..1519 "}"
+                    Whitespace@1519..1532 "\n            "
+                CaseDefault@1532..1598
+                  Default@1532..1539 "default"
+                  Whitespace@1539..1540 " "
+                  Block@1540..1598
+                    BraceOpen@1540..1541 "{"
+                    Whitespace@1541..1558 "\n                "
+                    Statement@1558..1583
+                      Expression@1558..1583
+                        Call@1558..1583
+                          Identifier@1558..1564 "revert"
+                          Arguments@1564..1583
+                            ParenOpen@1564..1565 "("
+                            Expression@1565..1566
+                              Literal@1565..1566
+                                LiteralInt@1565..1566 "0"
+                            Comma@1566..1567 ","
+                            Whitespace@1567..1568 " "
+                            Expression@1568..1569
+                              Literal@1568..1569
+                                LiteralInt@1568..1569 "0"
+                            ParenClose@1569..1570 ")"
+                            Whitespace@1570..1583 "\n            "
+                    BraceClose@1583..1584 "}"
+                    Whitespace@1584..1598 "\n\n            "
+            Statement@1598..1829
+              Function@1598..1829
+                Function@1598..1606 "function"
+                Whitespace@1606..1607 " "
+                Identifier@1607..1611 "mint"
+                Arguments@1611..1629
+                  ParenOpen@1611..1612 "("
+                  Identifiers@1612..1627
+                    Identifier@1612..1619 "account"
+                    Comma@1619..1620 ","
+                    Whitespace@1620..1621 " "
+                    Identifier@1621..1627 "amount"
+                  ParenClose@1627..1628 ")"
+                  Whitespace@1628..1629 " "
+                Returns@1629..1629
+                Block@1629..1829
+                  BraceOpen@1629..1630 "{"
+                  Whitespace@1630..1647 "\n                "
+                  Statement@1647..1689
+                    Expression@1647..1689
+                      Call@1647..1689
+                        Identifier@1647..1654 "require"
+                        Arguments@1654..1689
+                          ParenOpen@1654..1655 "("
+                          Expression@1655..1670
+                            Call@1655..1670
+                              Identifier@1655..1668 "calledByOwner"
+                              Arguments@1668..1670
+                                ParenOpen@1668..1669 "("
+                                ParenClose@1669..1670 ")"
+                          ParenClose@1670..1671 ")"
+                          Whitespace@1671..1689 "\n\n                "
+                  Statement@1689..1724
+                    Expression@1689..1724
+                      Call@1689..1724
+                        Identifier@1689..1699 "mintTokens"
+                        Arguments@1699..1724
+                          ParenOpen@1699..1700 "("
+                          Expression@1700..1706
+                            Identifier@1700..1706 "amount"
+                          ParenClose@1706..1707 ")"
+                          Whitespace@1707..1724 "\n                "
+                  Statement@1724..1770
+                    Expression@1724..1770
+                      Call@1724..1770
+                        Identifier@1724..1736 "addToBalance"
+                        Arguments@1736..1770
+                          ParenOpen@1736..1737 "("
+                          Expression@1737..1744
+                            Identifier@1737..1744 "account"
+                          Comma@1744..1745 ","
+                          Whitespace@1745..1746 " "
+                          Expression@1746..1752
+                            Identifier@1746..1752 "amount"
+                          ParenClose@1752..1753 ")"
+                          Whitespace@1753..1770 "\n                "
+                  Statement@1770..1815
+                    Expression@1770..1815
+                      Call@1770..1815
+                        Identifier@1770..1782 "emitTransfer"
+                        Arguments@1782..1815
+                          ParenOpen@1782..1783 "("
+                          Expression@1783..1784
+                            Literal@1783..1784
+                              LiteralInt@1783..1784 "0"
+                          Comma@1784..1785 ","
+                          Whitespace@1785..1786 " "
+                          Expression@1786..1793
+                            Identifier@1786..1793 "account"
+                          Comma@1793..1794 ","
+                          Whitespace@1794..1795 " "
+                          Expression@1795..1801
+                            Identifier@1795..1801 "amount"
+                          ParenClose@1801..1802 ")"
+                          Whitespace@1802..1815 "\n            "
+                  BraceClose@1815..1816 "}"
+                  Whitespace@1816..1829 "\n            "
+            Statement@1829..1941
+              Function@1829..1941
+                Function@1829..1837 "function"
+                Whitespace@1837..1838 " "
+                Identifier@1838..1846 "transfer"
+                Arguments@1846..1859
+                  ParenOpen@1846..1847 "("
+                  Identifiers@1847..1857
+                    Identifier@1847..1849 "to"
+                    Comma@1849..1850 ","
+                    Whitespace@1850..1851 " "
+                    Identifier@1851..1857 "amount"
+                  ParenClose@1857..1858 ")"
+                  Whitespace@1858..1859 " "
+                Returns@1859..1859
+                Block@1859..1941
+                  BraceOpen@1859..1860 "{"
+                  Whitespace@1860..1877 "\n                "
+                  Statement@1877..1927
+                    Expression@1877..1927
+                      Call@1877..1927
+                        Identifier@1877..1892 "executeTransfer"
+                        Arguments@1892..1927
+                          ParenOpen@1892..1893 "("
+                          Expression@1893..1901
+                            Call@1893..1901
+                              Identifier@1893..1899 "caller"
+                              Arguments@1899..1901
+                                ParenOpen@1899..1900 "("
+                                ParenClose@1900..1901 ")"
+                          Comma@1901..1902 ","
+                          Whitespace@1902..1903 " "
+                          Expression@1903..1905
+                            Identifier@1903..1905 "to"
+                          Comma@1905..1906 ","
+                          Whitespace@1906..1907 " "
+                          Expression@1907..1913
+                            Identifier@1907..1913 "amount"
+                          ParenClose@1913..1914 ")"
+                          Whitespace@1914..1927 "\n            "
+                  BraceClose@1927..1928 "}"
+                  Whitespace@1928..1941 "\n            "
+            Statement@1941..2160
+              Function@1941..2160
+                Function@1941..1949 "function"
+                Whitespace@1949..1950 " "
+                Identifier@1950..1957 "approve"
+                Arguments@1957..1975
+                  ParenOpen@1957..1958 "("
+                  Identifiers@1958..1973
+                    Identifier@1958..1965 "spender"
+                    Comma@1965..1966 ","
+                    Whitespace@1966..1967 " "
+                    Identifier@1967..1973 "amount"
+                  ParenClose@1973..1974 ")"
+                  Whitespace@1974..1975 " "
+                Returns@1975..1975
+                Block@1975..2160
+                  BraceOpen@1975..1976 "{"
+                  Whitespace@1976..1993 "\n                "
+                  Statement@1993..2038
+                    Expression@1993..2038
+                      Call@1993..2038
+                        Identifier@1993..2012 "revertIfZeroAddress"
+                        Arguments@2012..2038
+                          ParenOpen@2012..2013 "("
+                          Expression@2013..2020
+                            Identifier@2013..2020 "spender"
+                          ParenClose@2020..2021 ")"
+                          Whitespace@2021..2038 "\n                "
+                  Statement@2038..2094
+                    Expression@2038..2094
+                      Call@2038..2094
+                        Identifier@2038..2050 "setAllowance"
+                        Arguments@2050..2094
+                          ParenOpen@2050..2051 "("
+                          Expression@2051..2059
+                            Call@2051..2059
+                              Identifier@2051..2057 "caller"
+                              Arguments@2057..2059
+                                ParenOpen@2057..2058 "("
+                                ParenClose@2058..2059 ")"
+                          Comma@2059..2060 ","
+                          Whitespace@2060..2061 " "
+                          Expression@2061..2068
+                            Identifier@2061..2068 "spender"
+                          Comma@2068..2069 ","
+                          Whitespace@2069..2070 " "
+                          Expression@2070..2076
+                            Identifier@2070..2076 "amount"
+                          ParenClose@2076..2077 ")"
+                          Whitespace@2077..2094 "\n                "
+                  Statement@2094..2146
+                    Expression@2094..2146
+                      Call@2094..2146
+                        Identifier@2094..2106 "emitApproval"
+                        Arguments@2106..2146
+                          ParenOpen@2106..2107 "("
+                          Expression@2107..2115
+                            Call@2107..2115
+                              Identifier@2107..2113 "caller"
+                              Arguments@2113..2115
+                                ParenOpen@2113..2114 "("
+                                ParenClose@2114..2115 ")"
+                          Comma@2115..2116 ","
+                          Whitespace@2116..2117 " "
+                          Expression@2117..2124
+                            Identifier@2117..2124 "spender"
+                          Comma@2124..2125 ","
+                          Whitespace@2125..2126 " "
+                          Expression@2126..2132
+                            Identifier@2126..2132 "amount"
+                          ParenClose@2132..2133 ")"
+                          Whitespace@2133..2146 "\n            "
+                  BraceClose@2146..2147 "}"
+                  Whitespace@2147..2160 "\n            "
+            Statement@2160..2339
+              Function@2160..2339
+                Function@2160..2168 "function"
+                Whitespace@2168..2169 " "
+                Identifier@2169..2181 "transferFrom"
+                Arguments@2181..2200
+                  ParenOpen@2181..2182 "("
+                  Identifiers@2182..2198
+                    Identifier@2182..2186 "from"
+                    Comma@2186..2187 ","
+                    Whitespace@2187..2188 " "
+                    Identifier@2188..2190 "to"
+                    Comma@2190..2191 ","
+                    Whitespace@2191..2192 " "
+                    Identifier@2192..2198 "amount"
+                  ParenClose@2198..2199 ")"
+                  Whitespace@2199..2200 " "
+                Returns@2200..2200
+                Block@2200..2339
+                  BraceOpen@2200..2201 "{"
+                  Whitespace@2201..2218 "\n                "
+                  Statement@2218..2278
+                    Expression@2218..2278
+                      Call@2218..2278
+                        Identifier@2218..2237 "decreaseAllowanceBy"
+                        Arguments@2237..2278
+                          ParenOpen@2237..2238 "("
+                          Expression@2238..2242
+                            Identifier@2238..2242 "from"
+                          Comma@2242..2243 ","
+                          Whitespace@2243..2244 " "
+                          Expression@2244..2252
+                            Call@2244..2252
+                              Identifier@2244..2250 "caller"
+                              Arguments@2250..2252
+                                ParenOpen@2250..2251 "("
+                                ParenClose@2251..2252 ")"
+                          Comma@2252..2253 ","
+                          Whitespace@2253..2254 " "
+                          Expression@2254..2260
+                            Identifier@2254..2260 "amount"
+                          ParenClose@2260..2261 ")"
+                          Whitespace@2261..2278 "\n                "
+                  Statement@2278..2324
+                    Expression@2278..2324
+                      Call@2278..2324
+                        Identifier@2278..2293 "executeTransfer"
+                        Arguments@2293..2324
+                          ParenOpen@2293..2294 "("
+                          Expression@2294..2298
+                            Identifier@2294..2298 "from"
+                          Comma@2298..2299 ","
+                          Whitespace@2299..2300 " "
+                          Expression@2300..2302
+                            Identifier@2300..2302 "to"
+                          Comma@2302..2303 ","
+                          Whitespace@2303..2304 " "
+                          Expression@2304..2310
+                            Identifier@2304..2310 "amount"
+                          ParenClose@2310..2311 ")"
+                          Whitespace@2311..2324 "\n            "
+                  BraceClose@2324..2325 "}"
+                  Whitespace@2325..2339 "\n\n            "
+            Statement@2339..2657
+              Function@2339..2657
+                Function@2339..2347 "function"
+                Whitespace@2347..2348 " "
+                Identifier@2348..2363 "executeTransfer"
+                Arguments@2363..2382
+                  ParenOpen@2363..2364 "("
+                  Identifiers@2364..2380
+                    Identifier@2364..2368 "from"
+                    Comma@2368..2369 ","
+                    Whitespace@2369..2370 " "
+                    Identifier@2370..2372 "to"
+                    Comma@2372..2373 ","
+                    Whitespace@2373..2374 " "
+                    Identifier@2374..2380 "amount"
+                  ParenClose@2380..2381 ")"
+                  Whitespace@2381..2382 " "
+                Returns@2382..2382
+                Block@2382..2657
+                  BraceOpen@2382..2383 "{"
+                  Whitespace@2383..2400 "\n                "
+                  Statement@2400..2440
+                    Expression@2400..2440
+                      Call@2400..2440
+                        Identifier@2400..2419 "revertIfZeroAddress"
+                        Arguments@2419..2440
+                          ParenOpen@2419..2420 "("
+                          Expression@2420..2422
+                            Identifier@2420..2422 "to"
+                          ParenClose@2422..2423 ")"
+                          Whitespace@2423..2440 "\n                "
+                  Statement@2440..2488
+                    Expression@2440..2488
+                      Call@2440..2488
+                        Identifier@2440..2457 "deductFromBalance"
+                        Arguments@2457..2488
+                          ParenOpen@2457..2458 "("
+                          Expression@2458..2462
+                            Identifier@2458..2462 "from"
+                          Comma@2462..2463 ","
+                          Whitespace@2463..2464 " "
+                          Expression@2464..2470
+                            Identifier@2464..2470 "amount"
+                          ParenClose@2470..2471 ")"
+                          Whitespace@2471..2488 "\n                "
+                  Statement@2488..2529
+                    Expression@2488..2529
+                      Call@2488..2529
+                        Identifier@2488..2500 "addToBalance"
+                        Arguments@2500..2529
+                          ParenOpen@2500..2501 "("
+                          Expression@2501..2503
+                            Identifier@2501..2503 "to"
+                          Comma@2503..2504 ","
+                          Whitespace@2504..2505 " "
+                          Expression@2505..2511
+                            Identifier@2505..2511 "amount"
+                          ParenClose@2511..2512 ")"
+                          Whitespace@2512..2529 "\n                "
+                  Statement@2529..2572
+                    Expression@2529..2572
+                      Call@2529..2572
+                        Identifier@2529..2541 "emitTransfer"
+                        Arguments@2541..2572
+                          ParenOpen@2541..2542 "("
+                          Expression@2542..2546
+                            Identifier@2542..2546 "from"
+                          Comma@2546..2547 ","
+                          Whitespace@2547..2548 " "
+                          Expression@2548..2550
+                            Identifier@2548..2550 "to"
+                          Comma@2550..2551 ","
+                          Whitespace@2551..2552 " "
+                          Expression@2552..2558
+                            Identifier@2552..2558 "amount"
+                          ParenClose@2558..2559 ")"
+                          Whitespace@2559..2572 "\n            "
+                  BraceClose@2572..2573 "}"
+                  Whitespace@2573..2588 "\n\n\n            "
+                  BlockComment@2588..2644 "/* ---------- calldat ..."
+                  Whitespace@2644..2657 "\n            "
+            Statement@2657..2814
+              Function@2657..2814
+                Function@2657..2665 "function"
+                Whitespace@2665..2666 " "
+                Identifier@2666..2674 "selector"
+                Arguments@2674..2677
+                  ParenOpen@2674..2675 "("
+                  ParenClose@2675..2676 ")"
+                  Whitespace@2676..2677 " "
+                Returns@2677..2682
+                  Returns@2677..2679 "->"
+                  Whitespace@2679..2680 " "
+                  Identifiers@2680..2682
+                    Identifier@2680..2681 "s"
+                    Whitespace@2681..2682 " "
+                Block@2682..2814
+                  BraceOpen@2682..2683 "{"
+                  Whitespace@2683..2700 "\n                "
+                  Statement@2700..2799
+                    Assignment@2700..2799
+                      Identifiers@2700..2702
+                        Identifier@2700..2701 "s"
+                        Whitespace@2701..2702 " "
+                      Assign@2702..2704 ":="
+                      Whitespace@2704..2705 " "
+                      Expression@2705..2799
+                        Call@2705..2799
+                          Identifier@2705..2708 "div"
+                          Arguments@2708..2799
+                            ParenOpen@2708..2709 "("
+                            Expression@2709..2724
+                              Call@2709..2724
+                                Identifier@2709..2721 "calldataload"
+                                Arguments@2721..2724
+                                  ParenOpen@2721..2722 "("
+                                  Expression@2722..2723
+                                    Literal@2722..2723
+                                      LiteralInt@2722..2723 "0"
+                                  ParenClose@2723..2724 ")"
+                            Comma@2724..2725 ","
+                            Whitespace@2725..2726 " "
+                            Expression@2726..2785
+                              Literal@2726..2785
+                                LiteralHex@2726..2785 "0x1000000000000000000 ..."
+                            ParenClose@2785..2786 ")"
+                            Whitespace@2786..2799 "\n            "
+                  BraceClose@2799..2800 "}"
+                  Whitespace@2800..2814 "\n\n            "
+            Statement@2814..3066
+              Function@2814..3066
+                Function@2814..2822 "function"
+                Whitespace@2822..2823 " "
+                Identifier@2823..2838 "decodeAsAddress"
+                Arguments@2838..2847
+                  ParenOpen@2838..2839 "("
+                  Identifiers@2839..2845
+                    Identifier@2839..2845 "offset"
+                  ParenClose@2845..2846 ")"
+                  Whitespace@2846..2847 " "
+                Returns@2847..2852
+                  Returns@2847..2849 "->"
+                  Whitespace@2849..2850 " "
+                  Identifiers@2850..2852
+                    Identifier@2850..2851 "v"
+                    Whitespace@2851..2852 " "
+                Block@2852..3066
+                  BraceOpen@2852..2853 "{"
+                  Whitespace@2853..2870 "\n                "
+                  Statement@2870..2912
+                    Assignment@2870..2912
+                      Identifiers@2870..2872
+                        Identifier@2870..2871 "v"
+                        Whitespace@2871..2872 " "
+                      Assign@2872..2874 ":="
+                      Whitespace@2874..2875 " "
+                      Expression@2875..2912
+                        Call@2875..2912
+                          Identifier@2875..2887 "decodeAsUint"
+                          Arguments@2887..2912
+                            ParenOpen@2887..2888 "("
+                            Expression@2888..2894
+                              Identifier@2888..2894 "offset"
+                            ParenClose@2894..2895 ")"
+                            Whitespace@2895..2912 "\n                "
+                  Statement@2912..3052
+                    If@2912..3052
+                      If@2912..2914 "if"
+                      Whitespace@2914..2915 " "
+                      Expression@2915..2987
+                        Call@2915..2987
+                          Identifier@2915..2921 "iszero"
+                          Arguments@2921..2987
+                            ParenOpen@2921..2922 "("
+                            Expression@2922..2985
+                              Call@2922..2985
+                                Identifier@2922..2928 "iszero"
+                                Arguments@2928..2985
+                                  ParenOpen@2928..2929 "("
+                                  Expression@2929..2984
+                                    Call@2929..2984
+                                      Identifier@2929..2932 "and"
+                                      Arguments@2932..2984
+                                        ParenOpen@2932..2933 "("
+                                        Expression@2933..2934
+                                          Identifier@2933..2934 "v"
+                                        Comma@2934..2935 ","
+                                        Whitespace@2935..2936 " "
+                                        Expression@2936..2983
+                                          Call@2936..2983
+                                            Identifier@2936..2939 "not"
+                                            Arguments@2939..2983
+                                              ParenOpen@2939..2940 "("
+                                              Expression@2940..2982
+                                                Literal@2940..2982
+                                                  LiteralHex@2940..2982 "0xfffffffffffffffffff ..."
+                                              ParenClose@2982..2983 ")"
+                                        ParenClose@2983..2984 ")"
+                                  ParenClose@2984..2985 ")"
+                            ParenClose@2985..2986 ")"
+                            Whitespace@2986..2987 " "
+                      Block@2987..3052
+                        BraceOpen@2987..2988 "{"
+                        Whitespace@2988..3009 "\n                    "
+                        Statement@3009..3038
+                          Expression@3009..3038
+                            Call@3009..3038
+                              Identifier@3009..3015 "revert"
+                              Arguments@3015..3038
+                                ParenOpen@3015..3016 "("
+                                Expression@3016..3017
+                                  Literal@3016..3017
+                                    LiteralInt@3016..3017 "0"
+                                Comma@3017..3018 ","
+                                Whitespace@3018..3019 " "
+                                Expression@3019..3020
+                                  Literal@3019..3020
+                                    LiteralInt@3019..3020 "0"
+                                ParenClose@3020..3021 ")"
+                                Whitespace@3021..3038 "\n                "
+                        BraceClose@3038..3039 "}"
+                        Whitespace@3039..3052 "\n            "
+                  BraceClose@3052..3053 "}"
+                  Whitespace@3053..3066 "\n            "
+            Statement@3066..3396
+              Function@3066..3396
+                Function@3066..3074 "function"
+                Whitespace@3074..3075 " "
+                Identifier@3075..3087 "decodeAsUint"
+                Arguments@3087..3096
+                  ParenOpen@3087..3088 "("
+                  Identifiers@3088..3094
+                    Identifier@3088..3094 "offset"
+                  ParenClose@3094..3095 ")"
+                  Whitespace@3095..3096 " "
+                Returns@3096..3101
+                  Returns@3096..3098 "->"
+                  Whitespace@3098..3099 " "
+                  Identifiers@3099..3101
+                    Identifier@3099..3100 "v"
+                    Whitespace@3100..3101 " "
+                Block@3101..3396
+                  BraceOpen@3101..3102 "{"
+                  Whitespace@3102..3119 "\n                "
+                  Statement@3119..3172
+                    Let@3119..3172
+                      Let@3119..3122 "let"
+                      Whitespace@3122..3123 " "
+                      Identifiers@3123..3127
+                        Identifier@3123..3126 "pos"
+                        Whitespace@3126..3127 " "
+                      Assign@3127..3129 ":="
+                      Whitespace@3129..3130 " "
+                      Expression@3130..3172
+                        Call@3130..3172
+                          Identifier@3130..3133 "add"
+                          Arguments@3133..3172
+                            ParenOpen@3133..3134 "("
+                            Expression@3134..3135
+                              Literal@3134..3135
+                                LiteralInt@3134..3135 "4"
+                            Comma@3135..3136 ","
+                            Whitespace@3136..3137 " "
+                            Expression@3137..3154
+                              Call@3137..3154
+                                Identifier@3137..3140 "mul"
+                                Arguments@3140..3154
+                                  ParenOpen@3140..3141 "("
+                                  Expression@3141..3147
+                                    Identifier@3141..3147 "offset"
+                                  Comma@3147..3148 ","
+                                  Whitespace@3148..3149 " "
+                                  Expression@3149..3153
+                                    Literal@3149..3153
+                                      LiteralHex@3149..3153 "0x20"
+                                  ParenClose@3153..3154 ")"
+                            ParenClose@3154..3155 ")"
+                            Whitespace@3155..3172 "\n                "
+                  Statement@3172..3279
+                    If@3172..3279
+                      If@3172..3174 "if"
+                      Whitespace@3174..3175 " "
+                      Expression@3175..3210
+                        Call@3175..3210
+                          Identifier@3175..3177 "lt"
+                          Arguments@3177..3210
+                            ParenOpen@3177..3178 "("
+                            Expression@3178..3192
+                              Call@3178..3192
+                                Identifier@3178..3190 "calldatasize"
+                                Arguments@3190..3192
+                                  ParenOpen@3190..3191 "("
+                                  ParenClose@3191..3192 ")"
+                            Comma@3192..3193 ","
+                            Whitespace@3193..3194 " "
+                            Expression@3194..3208
+                              Call@3194..3208
+                                Identifier@3194..3197 "add"
+                                Arguments@3197..3208
+                                  ParenOpen@3197..3198 "("
+                                  Expression@3198..3201
+                                    Identifier@3198..3201 "pos"
+                                  Comma@3201..3202 ","
+                                  Whitespace@3202..3203 " "
+                                  Expression@3203..3207
+                                    Literal@3203..3207
+                                      LiteralHex@3203..3207 "0x20"
+                                  ParenClose@3207..3208 ")"
+                            ParenClose@3208..3209 ")"
+                            Whitespace@3209..3210 " "
+                      Block@3210..3279
+                        BraceOpen@3210..3211 "{"
+                        Whitespace@3211..3232 "\n                    "
+                        Statement@3232..3261
+                          Expression@3232..3261
+                            Call@3232..3261
+                              Identifier@3232..3238 "revert"
+                              Arguments@3238..3261
+                                ParenOpen@3238..3239 "("
+                                Expression@3239..3240
+                                  Literal@3239..3240
+                                    LiteralInt@3239..3240 "0"
+                                Comma@3240..3241 ","
+                                Whitespace@3241..3242 " "
+                                Expression@3242..3243
+                                  Literal@3242..3243
+                                    LiteralInt@3242..3243 "0"
+                                ParenClose@3243..3244 ")"
+                                Whitespace@3244..3261 "\n                "
+                        BraceClose@3261..3262 "}"
+                        Whitespace@3262..3279 "\n                "
+                  Statement@3279..3314
+                    Assignment@3279..3314
+                      Identifiers@3279..3281
+                        Identifier@3279..3280 "v"
+                        Whitespace@3280..3281 " "
+                      Assign@3281..3283 ":="
+                      Whitespace@3283..3284 " "
+                      Expression@3284..3314
+                        Call@3284..3314
+                          Identifier@3284..3296 "calldataload"
+                          Arguments@3296..3314
+                            ParenOpen@3296..3297 "("
+                            Expression@3297..3300
+                              Identifier@3297..3300 "pos"
+                            ParenClose@3300..3301 ")"
+                            Whitespace@3301..3314 "\n            "
+                  BraceClose@3314..3315 "}"
+                  Whitespace@3315..3328 "\n            "
+                  BlockComment@3328..3383 "/* ---------- calldat ..."
+                  Whitespace@3383..3396 "\n            "
+            Statement@3396..3508
+              Function@3396..3508
+                Function@3396..3404 "function"
+                Whitespace@3404..3405 " "
+                Identifier@3405..3415 "returnUint"
+                Arguments@3415..3419
+                  ParenOpen@3415..3416 "("
+                  Identifiers@3416..3417
+                    Identifier@3416..3417 "v"
+                  ParenClose@3417..3418 ")"
+                  Whitespace@3418..3419 " "
+                Returns@3419..3419
+                Block@3419..3508
+                  BraceOpen@3419..3420 "{"
+                  Whitespace@3420..3437 "\n                "
+                  Statement@3437..3466
+                    Expression@3437..3466
+                      Call@3437..3466
+                        Identifier@3437..3443 "mstore"
+                        Arguments@3443..3466
+                          ParenOpen@3443..3444 "("
+                          Expression@3444..3445
+                            Literal@3444..3445
+                              LiteralInt@3444..3445 "0"
+                          Comma@3445..3446 ","
+                          Whitespace@3446..3447 " "
+                          Expression@3447..3448
+                            Identifier@3447..3448 "v"
+                          ParenClose@3448..3449 ")"
+                          Whitespace@3449..3466 "\n                "
+                  Statement@3466..3494
+                    Expression@3466..3494
+                      Call@3466..3494
+                        Identifier@3466..3472 "return"
+                        Arguments@3472..3494
+                          ParenOpen@3472..3473 "("
+                          Expression@3473..3474
+                            Literal@3473..3474
+                              LiteralInt@3473..3474 "0"
+                          Comma@3474..3475 ","
+                          Whitespace@3475..3476 " "
+                          Expression@3476..3480
+                            Literal@3476..3480
+                              LiteralHex@3476..3480 "0x20"
+                          ParenClose@3480..3481 ")"
+                          Whitespace@3481..3494 "\n            "
+                  BraceClose@3494..3495 "}"
+                  Whitespace@3495..3508 "\n            "
+            Statement@3508..3634
+              Function@3508..3634
+                Function@3508..3516 "function"
+                Whitespace@3516..3517 " "
+                Identifier@3517..3527 "returnTrue"
+                Arguments@3527..3530
+                  ParenOpen@3527..3528 "("
+                  ParenClose@3528..3529 ")"
+                  Whitespace@3529..3530 " "
+                Returns@3530..3530
+                Block@3530..3634
+                  BraceOpen@3530..3531 "{"
+                  Whitespace@3531..3548 "\n                "
+                  Statement@3548..3574
+                    Expression@3548..3574
+                      Call@3548..3574
+                        Identifier@3548..3558 "returnUint"
+                        Arguments@3558..3574
+                          ParenOpen@3558..3559 "("
+                          Expression@3559..3560
+                            Literal@3559..3560
+                              LiteralInt@3559..3560 "1"
+                          ParenClose@3560..3561 ")"
+                          Whitespace@3561..3574 "\n            "
+                  BraceClose@3574..3575 "}"
+                  Whitespace@3575..3589 "\n\n            "
+                  BlockComment@3589..3621 "/* -------- events -- ..."
+                  Whitespace@3621..3634 "\n            "
+            Statement@3634..3865
+              Function@3634..3865
+                Function@3634..3642 "function"
+                Whitespace@3642..3643 " "
+                Identifier@3643..3655 "emitTransfer"
+                Arguments@3655..3674
+                  ParenOpen@3655..3656 "("
+                  Identifiers@3656..3672
+                    Identifier@3656..3660 "from"
+                    Comma@3660..3661 ","
+                    Whitespace@3661..3662 " "
+                    Identifier@3662..3664 "to"
+                    Comma@3664..3665 ","
+                    Whitespace@3665..3666 " "
+                    Identifier@3666..3672 "amount"
+                  ParenClose@3672..3673 ")"
+                  Whitespace@3673..3674 " "
+                Returns@3674..3674
+                Block@3674..3865
+                  BraceOpen@3674..3675 "{"
+                  Whitespace@3675..3692 "\n                "
+                  Statement@3692..3796
+                    Let@3692..3796
+                      Let@3692..3695 "let"
+                      Whitespace@3695..3696 " "
+                      Identifiers@3696..3710
+                        Identifier@3696..3709 "signatureHash"
+                        Whitespace@3709..3710 " "
+                      Assign@3710..3712 ":="
+                      Whitespace@3712..3713 " "
+                      Expression@3713..3796
+                        Literal@3713..3796
+                          LiteralHex@3713..3779 "0xddf252ad1be2c89b69c ..."
+                          Whitespace@3779..3796 "\n                "
+                  Statement@3796..3851
+                    Expression@3796..3851
+                      Call@3796..3851
+                        Identifier@3796..3805 "emitEvent"
+                        Arguments@3805..3851
+                          ParenOpen@3805..3806 "("
+                          Expression@3806..3819
+                            Identifier@3806..3819 "signatureHash"
+                          Comma@3819..3820 ","
+                          Whitespace@3820..3821 " "
+                          Expression@3821..3825
+                            Identifier@3821..3825 "from"
+                          Comma@3825..3826 ","
+                          Whitespace@3826..3827 " "
+                          Expression@3827..3829
+                            Identifier@3827..3829 "to"
+                          Comma@3829..3830 ","
+                          Whitespace@3830..3831 " "
+                          Expression@3831..3837
+                            Identifier@3831..3837 "amount"
+                          ParenClose@3837..3838 ")"
+                          Whitespace@3838..3851 "\n            "
+                  BraceClose@3851..3852 "}"
+                  Whitespace@3852..3865 "\n            "
+            Statement@3865..4106
+              Function@3865..4106
+                Function@3865..3873 "function"
+                Whitespace@3873..3874 " "
+                Identifier@3874..3886 "emitApproval"
+                Arguments@3886..3910
+                  ParenOpen@3886..3887 "("
+                  Identifiers@3887..3908
+                    Identifier@3887..3891 "from"
+                    Comma@3891..3892 ","
+                    Whitespace@3892..3893 " "
+                    Identifier@3893..3900 "spender"
+                    Comma@3900..3901 ","
+                    Whitespace@3901..3902 " "
+                    Identifier@3902..3908 "amount"
+                  ParenClose@3908..3909 ")"
+                  Whitespace@3909..3910 " "
+                Returns@3910..3910
+                Block@3910..4106
+                  BraceOpen@3910..3911 "{"
+                  Whitespace@3911..3928 "\n                "
+                  Statement@3928..4032
+                    Let@3928..4032
+                      Let@3928..3931 "let"
+                      Whitespace@3931..3932 " "
+                      Identifiers@3932..3946
+                        Identifier@3932..3945 "signatureHash"
+                        Whitespace@3945..3946 " "
+                      Assign@3946..3948 ":="
+                      Whitespace@3948..3949 " "
+                      Expression@3949..4032
+                        Literal@3949..4032
+                          LiteralHex@3949..4015 "0x8c5be1e5ebec7d5bd14 ..."
+                          Whitespace@4015..4032 "\n                "
+                  Statement@4032..4092
+                    Expression@4032..4092
+                      Call@4032..4092
+                        Identifier@4032..4041 "emitEvent"
+                        Arguments@4041..4092
+                          ParenOpen@4041..4042 "("
+                          Expression@4042..4055
+                            Identifier@4042..4055 "signatureHash"
+                          Comma@4055..4056 ","
+                          Whitespace@4056..4057 " "
+                          Expression@4057..4061
+                            Identifier@4057..4061 "from"
+                          Comma@4061..4062 ","
+                          Whitespace@4062..4063 " "
+                          Expression@4063..4070
+                            Identifier@4063..4070 "spender"
+                          Comma@4070..4071 ","
+                          Whitespace@4071..4072 " "
+                          Expression@4072..4078
+                            Identifier@4072..4078 "amount"
+                          ParenClose@4078..4079 ")"
+                          Whitespace@4079..4092 "\n            "
+                  BraceClose@4092..4093 "}"
+                  Whitespace@4093..4106 "\n            "
+            Statement@4106..4357
+              Function@4106..4357
+                Function@4106..4114 "function"
+                Whitespace@4114..4115 " "
+                Identifier@4115..4124 "emitEvent"
+                Arguments@4124..4172
+                  ParenOpen@4124..4125 "("
+                  Identifiers@4125..4170
+                    Identifier@4125..4138 "signatureHash"
+                    Comma@4138..4139 ","
+                    Whitespace@4139..4140 " "
+                    Identifier@4140..4148 "indexed1"
+                    Comma@4148..4149 ","
+                    Whitespace@4149..4150 " "
+                    Identifier@4150..4158 "indexed2"
+                    Comma@4158..4159 ","
+                    Whitespace@4159..4160 " "
+                    Identifier@4160..4170 "nonIndexed"
+                  ParenClose@4170..4171 ")"
+                  Whitespace@4171..4172 " "
+                Returns@4172..4172
+                Block@4172..4357
+                  BraceOpen@4172..4173 "{"
+                  Whitespace@4173..4190 "\n                "
+                  Statement@4190..4228
+                    Expression@4190..4228
+                      Call@4190..4228
+                        Identifier@4190..4196 "mstore"
+                        Arguments@4196..4228
+                          ParenOpen@4196..4197 "("
+                          Expression@4197..4198
+                            Literal@4197..4198
+                              LiteralInt@4197..4198 "0"
+                          Comma@4198..4199 ","
+                          Whitespace@4199..4200 " "
+                          Expression@4200..4210
+                            Identifier@4200..4210 "nonIndexed"
+                          ParenClose@4210..4211 ")"
+                          Whitespace@4211..4228 "\n                "
+                  Statement@4228..4289
+                    Expression@4228..4289
+                      Call@4228..4289
+                        Identifier@4228..4232 "log3"
+                        Arguments@4232..4289
+                          ParenOpen@4232..4233 "("
+                          Expression@4233..4234
+                            Literal@4233..4234
+                              LiteralInt@4233..4234 "0"
+                          Comma@4234..4235 ","
+                          Whitespace@4235..4236 " "
+                          Expression@4236..4240
+                            Literal@4236..4240
+                              LiteralHex@4236..4240 "0x20"
+                          Comma@4240..4241 ","
+                          Whitespace@4241..4242 " "
+                          Expression@4242..4255
+                            Identifier@4242..4255 "signatureHash"
+                          Comma@4255..4256 ","
+                          Whitespace@4256..4257 " "
+                          Expression@4257..4265
+                            Identifier@4257..4265 "indexed1"
+                          Comma@4265..4266 ","
+                          Whitespace@4266..4267 " "
+                          Expression@4267..4275
+                            Identifier@4267..4275 "indexed2"
+                          ParenClose@4275..4276 ")"
+                          Whitespace@4276..4289 "\n            "
+                  BraceClose@4289..4290 "}"
+                  Whitespace@4290..4304 "\n\n            "
+                  BlockComment@4304..4344 "/* -------- storage l ..."
+                  Whitespace@4344..4357 "\n            "
+            Statement@4357..4405
+              Function@4357..4405
+                Function@4357..4365 "function"
+                Whitespace@4365..4366 " "
+                Identifier@4366..4374 "ownerPos"
+                Arguments@4374..4377
+                  ParenOpen@4374..4375 "("
+                  ParenClose@4375..4376 ")"
+                  Whitespace@4376..4377 " "
+                Returns@4377..4382
+                  Returns@4377..4379 "->"
+                  Whitespace@4379..4380 " "
+                  Identifiers@4380..4382
+                    Identifier@4380..4381 "p"
+                    Whitespace@4381..4382 " "
+                Block@4382..4405
+                  BraceOpen@4382..4383 "{"
+                  Whitespace@4383..4384 " "
+                  Statement@4384..4391
+                    Assignment@4384..4391
+                      Identifiers@4384..4386
+                        Identifier@4384..4385 "p"
+                        Whitespace@4385..4386 " "
+                      Assign@4386..4388 ":="
+                      Whitespace@4388..4389 " "
+                      Expression@4389..4391
+                        Literal@4389..4391
+                          LiteralInt@4389..4390 "0"
+                          Whitespace@4390..4391 " "
+                  BraceClose@4391..4392 "}"
+                  Whitespace@4392..4405 "\n            "
+            Statement@4405..4459
+              Function@4405..4459
+                Function@4405..4413 "function"
+                Whitespace@4413..4414 " "
+                Identifier@4414..4428 "totalSupplyPos"
+                Arguments@4428..4431
+                  ParenOpen@4428..4429 "("
+                  ParenClose@4429..4430 ")"
+                  Whitespace@4430..4431 " "
+                Returns@4431..4436
+                  Returns@4431..4433 "->"
+                  Whitespace@4433..4434 " "
+                  Identifiers@4434..4436
+                    Identifier@4434..4435 "p"
+                    Whitespace@4435..4436 " "
+                Block@4436..4459
+                  BraceOpen@4436..4437 "{"
+                  Whitespace@4437..4438 " "
+                  Statement@4438..4445
+                    Assignment@4438..4445
+                      Identifiers@4438..4440
+                        Identifier@4438..4439 "p"
+                        Whitespace@4439..4440 " "
+                      Assign@4440..4442 ":="
+                      Whitespace@4442..4443 " "
+                      Expression@4443..4445
+                        Literal@4443..4445
+                          LiteralInt@4443..4444 "1"
+                          Whitespace@4444..4445 " "
+                  BraceClose@4445..4446 "}"
+                  Whitespace@4446..4459 "\n            "
+            Statement@4459..4585
+              Function@4459..4585
+                Function@4459..4467 "function"
+                Whitespace@4467..4468 " "
+                Identifier@4468..4490 "accountToStorageOffset"
+                Arguments@4490..4500
+                  ParenOpen@4490..4491 "("
+                  Identifiers@4491..4498
+                    Identifier@4491..4498 "account"
+                  ParenClose@4498..4499 ")"
+                  Whitespace@4499..4500 " "
+                Returns@4500..4510
+                  Returns@4500..4502 "->"
+                  Whitespace@4502..4503 " "
+                  Identifiers@4503..4510
+                    Identifier@4503..4509 "offset"
+                    Whitespace@4509..4510 " "
+                Block@4510..4585
+                  BraceOpen@4510..4511 "{"
+                  Whitespace@4511..4528 "\n                "
+                  Statement@4528..4571
+                    Assignment@4528..4571
+                      Identifiers@4528..4535
+                        Identifier@4528..4534 "offset"
+                        Whitespace@4534..4535 " "
+                      Assign@4535..4537 ":="
+                      Whitespace@4537..4538 " "
+                      Expression@4538..4571
+                        Call@4538..4571
+                          Identifier@4538..4541 "add"
+                          Arguments@4541..4571
+                            ParenOpen@4541..4542 "("
+                            Expression@4542..4548
+                              Literal@4542..4548
+                                LiteralHex@4542..4548 "0x1000"
+                            Comma@4548..4549 ","
+                            Whitespace@4549..4550 " "
+                            Expression@4550..4557
+                              Identifier@4550..4557 "account"
+                            ParenClose@4557..4558 ")"
+                            Whitespace@4558..4571 "\n            "
+                  BraceClose@4571..4572 "}"
+                  Whitespace@4572..4585 "\n            "
+            Statement@4585..4902
+              Function@4585..4902
+                Function@4585..4593 "function"
+                Whitespace@4593..4594 " "
+                Identifier@4594..4616 "allowanceStorageOffset"
+                Arguments@4616..4635
+                  ParenOpen@4616..4617 "("
+                  Identifiers@4617..4633
+                    Identifier@4617..4624 "account"
+                    Comma@4624..4625 ","
+                    Whitespace@4625..4626 " "
+                    Identifier@4626..4633 "spender"
+                  ParenClose@4633..4634 ")"
+                  Whitespace@4634..4635 " "
+                Returns@4635..4645
+                  Returns@4635..4637 "->"
+                  Whitespace@4637..4638 " "
+                  Identifiers@4638..4645
+                    Identifier@4638..4644 "offset"
+                    Whitespace@4644..4645 " "
+                Block@4645..4902
+                  BraceOpen@4645..4646 "{"
+                  Whitespace@4646..4663 "\n                "
+                  Statement@4663..4721
+                    Assignment@4663..4721
+                      Identifiers@4663..4670
+                        Identifier@4663..4669 "offset"
+                        Whitespace@4669..4670 " "
+                      Assign@4670..4672 ":="
+                      Whitespace@4672..4673 " "
+                      Expression@4673..4721
+                        Call@4673..4721
+                          Identifier@4673..4695 "accountToStorageOffset"
+                          Arguments@4695..4721
+                            ParenOpen@4695..4696 "("
+                            Expression@4696..4703
+                              Identifier@4696..4703 "account"
+                            ParenClose@4703..4704 ")"
+                            Whitespace@4704..4721 "\n                "
+                  Statement@4721..4755
+                    Expression@4721..4755
+                      Call@4721..4755
+                        Identifier@4721..4727 "mstore"
+                        Arguments@4727..4755
+                          ParenOpen@4727..4728 "("
+                          Expression@4728..4729
+                            Literal@4728..4729
+                              LiteralInt@4728..4729 "0"
+                          Comma@4729..4730 ","
+                          Whitespace@4730..4731 " "
+                          Expression@4731..4737
+                            Identifier@4731..4737 "offset"
+                          ParenClose@4737..4738 ")"
+                          Whitespace@4738..4755 "\n                "
+                  Statement@4755..4793
+                    Expression@4755..4793
+                      Call@4755..4793
+                        Identifier@4755..4761 "mstore"
+                        Arguments@4761..4793
+                          ParenOpen@4761..4762 "("
+                          Expression@4762..4766
+                            Literal@4762..4766
+                              LiteralHex@4762..4766 "0x20"
+                          Comma@4766..4767 ","
+                          Whitespace@4767..4768 " "
+                          Expression@4768..4775
+                            Identifier@4768..4775 "spender"
+                          ParenClose@4775..4776 ")"
+                          Whitespace@4776..4793 "\n                "
+                  Statement@4793..4834
+                    Assignment@4793..4834
+                      Identifiers@4793..4800
+                        Identifier@4793..4799 "offset"
+                        Whitespace@4799..4800 " "
+                      Assign@4800..4802 ":="
+                      Whitespace@4802..4803 " "
+                      Expression@4803..4834
+                        Call@4803..4834
+                          Identifier@4803..4812 "keccak256"
+                          Arguments@4812..4834
+                            ParenOpen@4812..4813 "("
+                            Expression@4813..4814
+                              Literal@4813..4814
+                                LiteralInt@4813..4814 "0"
+                            Comma@4814..4815 ","
+                            Whitespace@4815..4816 " "
+                            Expression@4816..4820
+                              Literal@4816..4820
+                                LiteralHex@4816..4820 "0x40"
+                            ParenClose@4820..4821 ")"
+                            Whitespace@4821..4834 "\n            "
+                  BraceClose@4834..4835 "}"
+                  Whitespace@4835..4849 "\n\n            "
+                  BlockComment@4849..4889 "/* -------- storage a ..."
+                  Whitespace@4889..4902 "\n            "
+            Statement@4902..4991
+              Function@4902..4991
+                Function@4902..4910 "function"
+                Whitespace@4910..4911 " "
+                Identifier@4911..4916 "owner"
+                Arguments@4916..4919
+                  ParenOpen@4916..4917 "("
+                  ParenClose@4917..4918 ")"
+                  Whitespace@4918..4919 " "
+                Returns@4919..4924
+                  Returns@4919..4921 "->"
+                  Whitespace@4921..4922 " "
+                  Identifiers@4922..4924
+                    Identifier@4922..4923 "o"
+                    Whitespace@4923..4924 " "
+                Block@4924..4991
+                  BraceOpen@4924..4925 "{"
+                  Whitespace@4925..4942 "\n                "
+                  Statement@4942..4977
+                    Assignment@4942..4977
+                      Identifiers@4942..4944
+                        Identifier@4942..4943 "o"
+                        Whitespace@4943..4944 " "
+                      Assign@4944..4946 ":="
+                      Whitespace@4946..4947 " "
+                      Expression@4947..4977
+                        Call@4947..4977
+                          Identifier@4947..4952 "sload"
+                          Arguments@4952..4977
+                            ParenOpen@4952..4953 "("
+                            Expression@4953..4963
+                              Call@4953..4963
+                                Identifier@4953..4961 "ownerPos"
+                                Arguments@4961..4963
+                                  ParenOpen@4961..4962 "("
+                                  ParenClose@4962..4963 ")"
+                            ParenClose@4963..4964 ")"
+                            Whitespace@4964..4977 "\n            "
+                  BraceClose@4977..4978 "}"
+                  Whitespace@4978..4991 "\n            "
+            Statement@4991..5102
+              Function@4991..5102
+                Function@4991..4999 "function"
+                Whitespace@4999..5000 " "
+                Identifier@5000..5011 "totalSupply"
+                Arguments@5011..5014
+                  ParenOpen@5011..5012 "("
+                  ParenClose@5012..5013 ")"
+                  Whitespace@5013..5014 " "
+                Returns@5014..5024
+                  Returns@5014..5016 "->"
+                  Whitespace@5016..5017 " "
+                  Identifiers@5017..5024
+                    Identifier@5017..5023 "supply"
+                    Whitespace@5023..5024 " "
+                Block@5024..5102
+                  BraceOpen@5024..5025 "{"
+                  Whitespace@5025..5042 "\n                "
+                  Statement@5042..5088
+                    Assignment@5042..5088
+                      Identifiers@5042..5049
+                        Identifier@5042..5048 "supply"
+                        Whitespace@5048..5049 " "
+                      Assign@5049..5051 ":="
+                      Whitespace@5051..5052 " "
+                      Expression@5052..5088
+                        Call@5052..5088
+                          Identifier@5052..5057 "sload"
+                          Arguments@5057..5088
+                            ParenOpen@5057..5058 "("
+                            Expression@5058..5074
+                              Call@5058..5074
+                                Identifier@5058..5072 "totalSupplyPos"
+                                Arguments@5072..5074
+                                  ParenOpen@5072..5073 "("
+                                  ParenClose@5073..5074 ")"
+                            ParenClose@5074..5075 ")"
+                            Whitespace@5075..5088 "\n            "
+                  BraceClose@5088..5089 "}"
+                  Whitespace@5089..5102 "\n            "
+            Statement@5102..5231
+              Function@5102..5231
+                Function@5102..5110 "function"
+                Whitespace@5110..5111 " "
+                Identifier@5111..5121 "mintTokens"
+                Arguments@5121..5130
+                  ParenOpen@5121..5122 "("
+                  Identifiers@5122..5128
+                    Identifier@5122..5128 "amount"
+                  ParenClose@5128..5129 ")"
+                  Whitespace@5129..5130 " "
+                Returns@5130..5130
+                Block@5130..5231
+                  BraceOpen@5130..5131 "{"
+                  Whitespace@5131..5148 "\n                "
+                  Statement@5148..5217
+                    Expression@5148..5217
+                      Call@5148..5217
+                        Identifier@5148..5154 "sstore"
+                        Arguments@5154..5217
+                          ParenOpen@5154..5155 "("
+                          Expression@5155..5171
+                            Call@5155..5171
+                              Identifier@5155..5169 "totalSupplyPos"
+                              Arguments@5169..5171
+                                ParenOpen@5169..5170 "("
+                                ParenClose@5170..5171 ")"
+                          Comma@5171..5172 ","
+                          Whitespace@5172..5173 " "
+                          Expression@5173..5203
+                            Call@5173..5203
+                              Identifier@5173..5180 "safeAdd"
+                              Arguments@5180..5203
+                                ParenOpen@5180..5181 "("
+                                Expression@5181..5194
+                                  Call@5181..5194
+                                    Identifier@5181..5192 "totalSupply"
+                                    Arguments@5192..5194
+                                      ParenOpen@5192..5193 "("
+                                      ParenClose@5193..5194 ")"
+                                Comma@5194..5195 ","
+                                Whitespace@5195..5196 " "
+                                Expression@5196..5202
+                                  Identifier@5196..5202 "amount"
+                                ParenClose@5202..5203 ")"
+                          ParenClose@5203..5204 ")"
+                          Whitespace@5204..5217 "\n            "
+                  BraceClose@5217..5218 "}"
+                  Whitespace@5218..5231 "\n            "
+            Statement@5231..5356
+              Function@5231..5356
+                Function@5231..5239 "function"
+                Whitespace@5239..5240 " "
+                Identifier@5240..5249 "balanceOf"
+                Arguments@5249..5259
+                  ParenOpen@5249..5250 "("
+                  Identifiers@5250..5257
+                    Identifier@5250..5257 "account"
+                  ParenClose@5257..5258 ")"
+                  Whitespace@5258..5259 " "
+                Returns@5259..5266
+                  Returns@5259..5261 "->"
+                  Whitespace@5261..5262 " "
+                  Identifiers@5262..5266
+                    Identifier@5262..5265 "bal"
+                    Whitespace@5265..5266 " "
+                Block@5266..5356
+                  BraceOpen@5266..5267 "{"
+                  Whitespace@5267..5284 "\n                "
+                  Statement@5284..5342
+                    Assignment@5284..5342
+                      Identifiers@5284..5288
+                        Identifier@5284..5287 "bal"
+                        Whitespace@5287..5288 " "
+                      Assign@5288..5290 ":="
+                      Whitespace@5290..5291 " "
+                      Expression@5291..5342
+                        Call@5291..5342
+                          Identifier@5291..5296 "sload"
+                          Arguments@5296..5342
+                            ParenOpen@5296..5297 "("
+                            Expression@5297..5328
+                              Call@5297..5328
+                                Identifier@5297..5319 "accountToStorageOffset"
+                                Arguments@5319..5328
+                                  ParenOpen@5319..5320 "("
+                                  Expression@5320..5327
+                                    Identifier@5320..5327 "account"
+                                  ParenClose@5327..5328 ")"
+                            ParenClose@5328..5329 ")"
+                            Whitespace@5329..5342 "\n            "
+                  BraceClose@5342..5343 "}"
+                  Whitespace@5343..5356 "\n            "
+            Statement@5356..5548
+              Function@5356..5548
+                Function@5356..5364 "function"
+                Whitespace@5364..5365 " "
+                Identifier@5365..5377 "addToBalance"
+                Arguments@5377..5395
+                  ParenOpen@5377..5378 "("
+                  Identifiers@5378..5393
+                    Identifier@5378..5385 "account"
+                    Comma@5385..5386 ","
+                    Whitespace@5386..5387 " "
+                    Identifier@5387..5393 "amount"
+                  ParenClose@5393..5394 ")"
+                  Whitespace@5394..5395 " "
+                Returns@5395..5395
+                Block@5395..5548
+                  BraceOpen@5395..5396 "{"
+                  Whitespace@5396..5413 "\n                "
+                  Statement@5413..5475
+                    Let@5413..5475
+                      Let@5413..5416 "let"
+                      Whitespace@5416..5417 " "
+                      Identifiers@5417..5424
+                        Identifier@5417..5423 "offset"
+                        Whitespace@5423..5424 " "
+                      Assign@5424..5426 ":="
+                      Whitespace@5426..5427 " "
+                      Expression@5427..5475
+                        Call@5427..5475
+                          Identifier@5427..5449 "accountToStorageOffset"
+                          Arguments@5449..5475
+                            ParenOpen@5449..5450 "("
+                            Expression@5450..5457
+                              Identifier@5450..5457 "account"
+                            ParenClose@5457..5458 ")"
+                            Whitespace@5458..5475 "\n                "
+                  Statement@5475..5534
+                    Expression@5475..5534
+                      Call@5475..5534
+                        Identifier@5475..5481 "sstore"
+                        Arguments@5481..5534
+                          ParenOpen@5481..5482 "("
+                          Expression@5482..5488
+                            Identifier@5482..5488 "offset"
+                          Comma@5488..5489 ","
+                          Whitespace@5489..5490 " "
+                          Expression@5490..5520
+                            Call@5490..5520
+                              Identifier@5490..5497 "safeAdd"
+                              Arguments@5497..5520
+                                ParenOpen@5497..5498 "("
+                                Expression@5498..5511
+                                  Call@5498..5511
+                                    Identifier@5498..5503 "sload"
+                                    Arguments@5503..5511
+                                      ParenOpen@5503..5504 "("
+                                      Expression@5504..5510
+                                        Identifier@5504..5510 "offset"
+                                      ParenClose@5510..5511 ")"
+                                Comma@5511..5512 ","
+                                Whitespace@5512..5513 " "
+                                Expression@5513..5519
+                                  Identifier@5513..5519 "amount"
+                                ParenClose@5519..5520 ")"
+                          ParenClose@5520..5521 ")"
+                          Whitespace@5521..5534 "\n            "
+                  BraceClose@5534..5535 "}"
+                  Whitespace@5535..5548 "\n            "
+            Statement@5548..5814
+              Function@5548..5814
+                Function@5548..5556 "function"
+                Whitespace@5556..5557 " "
+                Identifier@5557..5574 "deductFromBalance"
+                Arguments@5574..5592
+                  ParenOpen@5574..5575 "("
+                  Identifiers@5575..5590
+                    Identifier@5575..5582 "account"
+                    Comma@5582..5583 ","
+                    Whitespace@5583..5584 " "
+                    Identifier@5584..5590 "amount"
+                  ParenClose@5590..5591 ")"
+                  Whitespace@5591..5592 " "
+                Returns@5592..5592
+                Block@5592..5814
+                  BraceOpen@5592..5593 "{"
+                  Whitespace@5593..5610 "\n                "
+                  Statement@5610..5672
+                    Let@5610..5672
+                      Let@5610..5613 "let"
+                      Whitespace@5613..5614 " "
+                      Identifiers@5614..5621
+                        Identifier@5614..5620 "offset"
+                        Whitespace@5620..5621 " "
+                      Assign@5621..5623 ":="
+                      Whitespace@5623..5624 " "
+                      Expression@5624..5672
+                        Call@5624..5672
+                          Identifier@5624..5646 "accountToStorageOffset"
+                          Arguments@5646..5672
+                            ParenOpen@5646..5647 "("
+                            Expression@5647..5654
+                              Identifier@5647..5654 "account"
+                            ParenClose@5654..5655 ")"
+                            Whitespace@5655..5672 "\n                "
+                  Statement@5672..5713
+                    Let@5672..5713
+                      Let@5672..5675 "let"
+                      Whitespace@5675..5676 " "
+                      Identifiers@5676..5680
+                        Identifier@5676..5679 "bal"
+                        Whitespace@5679..5680 " "
+                      Assign@5680..5682 ":="
+                      Whitespace@5682..5683 " "
+                      Expression@5683..5713
+                        Call@5683..5713
+                          Identifier@5683..5688 "sload"
+                          Arguments@5688..5713
+                            ParenOpen@5688..5689 "("
+                            Expression@5689..5695
+                              Identifier@5689..5695 "offset"
+                            ParenClose@5695..5696 ")"
+                            Whitespace@5696..5713 "\n                "
+                  Statement@5713..5755
+                    Expression@5713..5755
+                      Call@5713..5755
+                        Identifier@5713..5720 "require"
+                        Arguments@5720..5755
+                          ParenOpen@5720..5721 "("
+                          Expression@5721..5737
+                            Call@5721..5737
+                              Identifier@5721..5724 "lte"
+                              Arguments@5724..5737
+                                ParenOpen@5724..5725 "("
+                                Expression@5725..5731
+                                  Identifier@5725..5731 "amount"
+                                Comma@5731..5732 ","
+                                Whitespace@5732..5733 " "
+                                Expression@5733..5736
+                                  Identifier@5733..5736 "bal"
+                                ParenClose@5736..5737 ")"
+                          ParenClose@5737..5738 ")"
+                          Whitespace@5738..5755 "\n                "
+                  Statement@5755..5800
+                    Expression@5755..5800
+                      Call@5755..5800
+                        Identifier@5755..5761 "sstore"
+                        Arguments@5761..5800
+                          ParenOpen@5761..5762 "("
+                          Expression@5762..5768
+                            Identifier@5762..5768 "offset"
+                          Comma@5768..5769 ","
+                          Whitespace@5769..5770 " "
+                          Expression@5770..5786
+                            Call@5770..5786
+                              Identifier@5770..5773 "sub"
+                              Arguments@5773..5786
+                                ParenOpen@5773..5774 "("
+                                Expression@5774..5777
+                                  Identifier@5774..5777 "bal"
+                                Comma@5777..5778 ","
+                                Whitespace@5778..5779 " "
+                                Expression@5779..5785
+                                  Identifier@5779..5785 "amount"
+                                ParenClose@5785..5786 ")"
+                          ParenClose@5786..5787 ")"
+                          Whitespace@5787..5800 "\n            "
+                  BraceClose@5800..5801 "}"
+                  Whitespace@5801..5814 "\n            "
+            Statement@5814..5963
+              Function@5814..5963
+                Function@5814..5822 "function"
+                Whitespace@5822..5823 " "
+                Identifier@5823..5832 "allowance"
+                Arguments@5832..5851
+                  ParenOpen@5832..5833 "("
+                  Identifiers@5833..5849
+                    Identifier@5833..5840 "account"
+                    Comma@5840..5841 ","
+                    Whitespace@5841..5842 " "
+                    Identifier@5842..5849 "spender"
+                  ParenClose@5849..5850 ")"
+                  Whitespace@5850..5851 " "
+                Returns@5851..5861
+                  Returns@5851..5853 "->"
+                  Whitespace@5853..5854 " "
+                  Identifiers@5854..5861
+                    Identifier@5854..5860 "amount"
+                    Whitespace@5860..5861 " "
+                Block@5861..5963
+                  BraceOpen@5861..5862 "{"
+                  Whitespace@5862..5879 "\n                "
+                  Statement@5879..5949
+                    Assignment@5879..5949
+                      Identifiers@5879..5886
+                        Identifier@5879..5885 "amount"
+                        Whitespace@5885..5886 " "
+                      Assign@5886..5888 ":="
+                      Whitespace@5888..5889 " "
+                      Expression@5889..5949
+                        Call@5889..5949
+                          Identifier@5889..5894 "sload"
+                          Arguments@5894..5949
+                            ParenOpen@5894..5895 "("
+                            Expression@5895..5935
+                              Call@5895..5935
+                                Identifier@5895..5917 "allowanceStorageOffset"
+                                Arguments@5917..5935
+                                  ParenOpen@5917..5918 "("
+                                  Expression@5918..5925
+                                    Identifier@5918..5925 "account"
+                                  Comma@5925..5926 ","
+                                  Whitespace@5926..5927 " "
+                                  Expression@5927..5934
+                                    Identifier@5927..5934 "spender"
+                                  ParenClose@5934..5935 ")"
+                            ParenClose@5935..5936 ")"
+                            Whitespace@5936..5949 "\n            "
+                  BraceClose@5949..5950 "}"
+                  Whitespace@5950..5963 "\n            "
+            Statement@5963..6112
+              Function@5963..6112
+                Function@5963..5971 "function"
+                Whitespace@5971..5972 " "
+                Identifier@5972..5984 "setAllowance"
+                Arguments@5984..6011
+                  ParenOpen@5984..5985 "("
+                  Identifiers@5985..6009
+                    Identifier@5985..5992 "account"
+                    Comma@5992..5993 ","
+                    Whitespace@5993..5994 " "
+                    Identifier@5994..6001 "spender"
+                    Comma@6001..6002 ","
+                    Whitespace@6002..6003 " "
+                    Identifier@6003..6009 "amount"
+                  ParenClose@6009..6010 ")"
+                  Whitespace@6010..6011 " "
+                Returns@6011..6011
+                Block@6011..6112
+                  BraceOpen@6011..6012 "{"
+                  Whitespace@6012..6029 "\n                "
+                  Statement@6029..6098
+                    Expression@6029..6098
+                      Call@6029..6098
+                        Identifier@6029..6035 "sstore"
+                        Arguments@6035..6098
+                          ParenOpen@6035..6036 "("
+                          Expression@6036..6076
+                            Call@6036..6076
+                              Identifier@6036..6058 "allowanceStorageOffset"
+                              Arguments@6058..6076
+                                ParenOpen@6058..6059 "("
+                                Expression@6059..6066
+                                  Identifier@6059..6066 "account"
+                                Comma@6066..6067 ","
+                                Whitespace@6067..6068 " "
+                                Expression@6068..6075
+                                  Identifier@6068..6075 "spender"
+                                ParenClose@6075..6076 ")"
+                          Comma@6076..6077 ","
+                          Whitespace@6077..6078 " "
+                          Expression@6078..6084
+                            Identifier@6078..6084 "amount"
+                          ParenClose@6084..6085 ")"
+                          Whitespace@6085..6098 "\n            "
+                  BraceClose@6098..6099 "}"
+                  Whitespace@6099..6112 "\n            "
+            Statement@6112..6496
+              Function@6112..6496
+                Function@6112..6120 "function"
+                Whitespace@6120..6121 " "
+                Identifier@6121..6140 "decreaseAllowanceBy"
+                Arguments@6140..6167
+                  ParenOpen@6140..6141 "("
+                  Identifiers@6141..6165
+                    Identifier@6141..6148 "account"
+                    Comma@6148..6149 ","
+                    Whitespace@6149..6150 " "
+                    Identifier@6150..6157 "spender"
+                    Comma@6157..6158 ","
+                    Whitespace@6158..6159 " "
+                    Identifier@6159..6165 "amount"
+                  ParenClose@6165..6166 ")"
+                  Whitespace@6166..6167 " "
+                Returns@6167..6167
+                Block@6167..6496
+                  BraceOpen@6167..6168 "{"
+                  Whitespace@6168..6185 "\n                "
+                  Statement@6185..6256
+                    Let@6185..6256
+                      Let@6185..6188 "let"
+                      Whitespace@6188..6189 " "
+                      Identifiers@6189..6196
+                        Identifier@6189..6195 "offset"
+                        Whitespace@6195..6196 " "
+                      Assign@6196..6198 ":="
+                      Whitespace@6198..6199 " "
+                      Expression@6199..6256
+                        Call@6199..6256
+                          Identifier@6199..6221 "allowanceStorageOffset"
+                          Arguments@6221..6256
+                            ParenOpen@6221..6222 "("
+                            Expression@6222..6229
+                              Identifier@6222..6229 "account"
+                            Comma@6229..6230 ","
+                            Whitespace@6230..6231 " "
+                            Expression@6231..6238
+                              Identifier@6231..6238 "spender"
+                            ParenClose@6238..6239 ")"
+                            Whitespace@6239..6256 "\n                "
+                  Statement@6256..6310
+                    Let@6256..6310
+                      Let@6256..6259 "let"
+                      Whitespace@6259..6260 " "
+                      Identifiers@6260..6277
+                        Identifier@6260..6276 "currentAllowance"
+                        Whitespace@6276..6277 " "
+                      Assign@6277..6279 ":="
+                      Whitespace@6279..6280 " "
+                      Expression@6280..6310
+                        Call@6280..6310
+                          Identifier@6280..6285 "sload"
+                          Arguments@6285..6310
+                            ParenOpen@6285..6286 "("
+                            Expression@6286..6292
+                              Identifier@6286..6292 "offset"
+                            ParenClose@6292..6293 ")"
+                            Whitespace@6293..6310 "\n                "
+                  Statement@6310..6365
+                    Expression@6310..6365
+                      Call@6310..6365
+                        Identifier@6310..6317 "require"
+                        Arguments@6317..6365
+                          ParenOpen@6317..6318 "("
+                          Expression@6318..6347
+                            Call@6318..6347
+                              Identifier@6318..6321 "lte"
+                              Arguments@6321..6347
+                                ParenOpen@6321..6322 "("
+                                Expression@6322..6328
+                                  Identifier@6322..6328 "amount"
+                                Comma@6328..6329 ","
+                                Whitespace@6329..6330 " "
+                                Expression@6330..6346
+                                  Identifier@6330..6346 "currentAllowance"
+                                ParenClose@6346..6347 ")"
+                          ParenClose@6347..6348 ")"
+                          Whitespace@6348..6365 "\n                "
+                  Statement@6365..6423
+                    Expression@6365..6423
+                      Call@6365..6423
+                        Identifier@6365..6371 "sstore"
+                        Arguments@6371..6423
+                          ParenOpen@6371..6372 "("
+                          Expression@6372..6378
+                            Identifier@6372..6378 "offset"
+                          Comma@6378..6379 ","
+                          Whitespace@6379..6380 " "
+                          Expression@6380..6409
+                            Call@6380..6409
+                              Identifier@6380..6383 "sub"
+                              Arguments@6383..6409
+                                ParenOpen@6383..6384 "("
+                                Expression@6384..6400
+                                  Identifier@6384..6400 "currentAllowance"
+                                Comma@6400..6401 ","
+                                Whitespace@6401..6402 " "
+                                Expression@6402..6408
+                                  Identifier@6402..6408 "amount"
+                                ParenClose@6408..6409 ")"
+                          ParenClose@6409..6410 ")"
+                          Whitespace@6410..6423 "\n            "
+                  BraceClose@6423..6424 "}"
+                  Whitespace@6424..6438 "\n\n            "
+                  BlockComment@6438..6483 "/* ---------- utility ..."
+                  Whitespace@6483..6496 "\n            "
+            Statement@6496..6586
+              Function@6496..6586
+                Function@6496..6504 "function"
+                Whitespace@6504..6505 " "
+                Identifier@6505..6508 "lte"
+                Arguments@6508..6515
+                  ParenOpen@6508..6509 "("
+                  Identifiers@6509..6513
+                    Identifier@6509..6510 "a"
+                    Comma@6510..6511 ","
+                    Whitespace@6511..6512 " "
+                    Identifier@6512..6513 "b"
+                  ParenClose@6513..6514 ")"
+                  Whitespace@6514..6515 " "
+                Returns@6515..6520
+                  Returns@6515..6517 "->"
+                  Whitespace@6517..6518 " "
+                  Identifiers@6518..6520
+                    Identifier@6518..6519 "r"
+                    Whitespace@6519..6520 " "
+                Block@6520..6586
+                  BraceOpen@6520..6521 "{"
+                  Whitespace@6521..6538 "\n                "
+                  Statement@6538..6572
+                    Assignment@6538..6572
+                      Identifiers@6538..6540
+                        Identifier@6538..6539 "r"
+                        Whitespace@6539..6540 " "
+                      Assign@6540..6542 ":="
+                      Whitespace@6542..6543 " "
+                      Expression@6543..6572
+                        Call@6543..6572
+                          Identifier@6543..6549 "iszero"
+                          Arguments@6549..6572
+                            ParenOpen@6549..6550 "("
+                            Expression@6550..6558
+                              Call@6550..6558
+                                Identifier@6550..6552 "gt"
+                                Arguments@6552..6558
+                                  ParenOpen@6552..6553 "("
+                                  Expression@6553..6554
+                                    Identifier@6553..6554 "a"
+                                  Comma@6554..6555 ","
+                                  Whitespace@6555..6556 " "
+                                  Expression@6556..6557
+                                    Identifier@6556..6557 "b"
+                                  ParenClose@6557..6558 ")"
+                            ParenClose@6558..6559 ")"
+                            Whitespace@6559..6572 "\n            "
+                  BraceClose@6572..6573 "}"
+                  Whitespace@6573..6586 "\n            "
+            Statement@6586..6676
+              Function@6586..6676
+                Function@6586..6594 "function"
+                Whitespace@6594..6595 " "
+                Identifier@6595..6598 "gte"
+                Arguments@6598..6605
+                  ParenOpen@6598..6599 "("
+                  Identifiers@6599..6603
+                    Identifier@6599..6600 "a"
+                    Comma@6600..6601 ","
+                    Whitespace@6601..6602 " "
+                    Identifier@6602..6603 "b"
+                  ParenClose@6603..6604 ")"
+                  Whitespace@6604..6605 " "
+                Returns@6605..6610
+                  Returns@6605..6607 "->"
+                  Whitespace@6607..6608 " "
+                  Identifiers@6608..6610
+                    Identifier@6608..6609 "r"
+                    Whitespace@6609..6610 " "
+                Block@6610..6676
+                  BraceOpen@6610..6611 "{"
+                  Whitespace@6611..6628 "\n                "
+                  Statement@6628..6662
+                    Assignment@6628..6662
+                      Identifiers@6628..6630
+                        Identifier@6628..6629 "r"
+                        Whitespace@6629..6630 " "
+                      Assign@6630..6632 ":="
+                      Whitespace@6632..6633 " "
+                      Expression@6633..6662
+                        Call@6633..6662
+                          Identifier@6633..6639 "iszero"
+                          Arguments@6639..6662
+                            ParenOpen@6639..6640 "("
+                            Expression@6640..6648
+                              Call@6640..6648
+                                Identifier@6640..6642 "lt"
+                                Arguments@6642..6648
+                                  ParenOpen@6642..6643 "("
+                                  Expression@6643..6644
+                                    Identifier@6643..6644 "a"
+                                  Comma@6644..6645 ","
+                                  Whitespace@6645..6646 " "
+                                  Expression@6646..6647
+                                    Identifier@6646..6647 "b"
+                                  ParenClose@6647..6648 ")"
+                            ParenClose@6648..6649 ")"
+                            Whitespace@6649..6662 "\n            "
+                  BraceClose@6662..6663 "}"
+                  Whitespace@6663..6676 "\n            "
+            Statement@6676..6822
+              Function@6676..6822
+                Function@6676..6684 "function"
+                Whitespace@6684..6685 " "
+                Identifier@6685..6692 "safeAdd"
+                Arguments@6692..6699
+                  ParenOpen@6692..6693 "("
+                  Identifiers@6693..6697
+                    Identifier@6693..6694 "a"
+                    Comma@6694..6695 ","
+                    Whitespace@6695..6696 " "
+                    Identifier@6696..6697 "b"
+                  ParenClose@6697..6698 ")"
+                  Whitespace@6698..6699 " "
+                Returns@6699..6704
+                  Returns@6699..6701 "->"
+                  Whitespace@6701..6702 " "
+                  Identifiers@6702..6704
+                    Identifier@6702..6703 "r"
+                    Whitespace@6703..6704 " "
+                Block@6704..6822
+                  BraceOpen@6704..6705 "{"
+                  Whitespace@6705..6722 "\n                "
+                  Statement@6722..6753
+                    Assignment@6722..6753
+                      Identifiers@6722..6724
+                        Identifier@6722..6723 "r"
+                        Whitespace@6723..6724 " "
+                      Assign@6724..6726 ":="
+                      Whitespace@6726..6727 " "
+                      Expression@6727..6753
+                        Call@6727..6753
+                          Identifier@6727..6730 "add"
+                          Arguments@6730..6753
+                            ParenOpen@6730..6731 "("
+                            Expression@6731..6732
+                              Identifier@6731..6732 "a"
+                            Comma@6732..6733 ","
+                            Whitespace@6733..6734 " "
+                            Expression@6734..6735
+                              Identifier@6734..6735 "b"
+                            ParenClose@6735..6736 ")"
+                            Whitespace@6736..6753 "\n                "
+                  Statement@6753..6808
+                    If@6753..6808
+                      If@6753..6755 "if"
+                      Whitespace@6755..6756 " "
+                      Expression@6756..6779
+                        Call@6756..6779
+                          Identifier@6756..6758 "or"
+                          Arguments@6758..6779
+                            ParenOpen@6758..6759 "("
+                            Expression@6759..6767
+                              Call@6759..6767
+                                Identifier@6759..6761 "lt"
+                                Arguments@6761..6767
+                                  ParenOpen@6761..6762 "("
+                                  Expression@6762..6763
+                                    Identifier@6762..6763 "r"
+                                  Comma@6763..6764 ","
+                                  Whitespace@6764..6765 " "
+                                  Expression@6765..6766
+                                    Identifier@6765..6766 "a"
+                                  ParenClose@6766..6767 ")"
+                            Comma@6767..6768 ","
+                            Whitespace@6768..6769 " "
+                            Expression@6769..6777
+                              Call@6769..6777
+                                Identifier@6769..6771 "lt"
+                                Arguments@6771..6777
+                                  ParenOpen@6771..6772 "("
+                                  Expression@6772..6773
+                                    Identifier@6772..6773 "r"
+                                  Comma@6773..6774 ","
+                                  Whitespace@6774..6775 " "
+                                  Expression@6775..6776
+                                    Identifier@6775..6776 "b"
+                                  ParenClose@6776..6777 ")"
+                            ParenClose@6777..6778 ")"
+                            Whitespace@6778..6779 " "
+                      Block@6779..6808
+                        BraceOpen@6779..6780 "{"
+                        Whitespace@6780..6781 " "
+                        Statement@6781..6794
+                          Expression@6781..6794
+                            Call@6781..6794
+                              Identifier@6781..6787 "revert"
+                              Arguments@6787..6794
+                                ParenOpen@6787..6788 "("
+                                Expression@6788..6789
+                                  Literal@6788..6789
+                                    LiteralInt@6788..6789 "0"
+                                Comma@6789..6790 ","
+                                Whitespace@6790..6791 " "
+                                Expression@6791..6792
+                                  Literal@6791..6792
+                                    LiteralInt@6791..6792 "0"
+                                ParenClose@6792..6793 ")"
+                                Whitespace@6793..6794 " "
+                        BraceClose@6794..6795 "}"
+                        Whitespace@6795..6808 "\n            "
+                  BraceClose@6808..6809 "}"
+                  Whitespace@6809..6822 "\n            "
+            Statement@6822..6927
+              Function@6822..6927
+                Function@6822..6830 "function"
+                Whitespace@6830..6831 " "
+                Identifier@6831..6844 "calledByOwner"
+                Arguments@6844..6847
+                  ParenOpen@6844..6845 "("
+                  ParenClose@6845..6846 ")"
+                  Whitespace@6846..6847 " "
+                Returns@6847..6854
+                  Returns@6847..6849 "->"
+                  Whitespace@6849..6850 " "
+                  Identifiers@6850..6854
+                    Identifier@6850..6853 "cbo"
+                    Whitespace@6853..6854 " "
+                Block@6854..6927
+                  BraceOpen@6854..6855 "{"
+                  Whitespace@6855..6872 "\n                "
+                  Statement@6872..6913
+                    Assignment@6872..6913
+                      Identifiers@6872..6876
+                        Identifier@6872..6875 "cbo"
+                        Whitespace@6875..6876 " "
+                      Assign@6876..6878 ":="
+                      Whitespace@6878..6879 " "
+                      Expression@6879..6913
+                        Call@6879..6913
+                          Identifier@6879..6881 "eq"
+                          Arguments@6881..6913
+                            ParenOpen@6881..6882 "("
+                            Expression@6882..6889
+                              Call@6882..6889
+                                Identifier@6882..6887 "owner"
+                                Arguments@6887..6889
+                                  ParenOpen@6887..6888 "("
+                                  ParenClose@6888..6889 ")"
+                            Comma@6889..6890 ","
+                            Whitespace@6890..6891 " "
+                            Expression@6891..6899
+                              Call@6891..6899
+                                Identifier@6891..6897 "caller"
+                                Arguments@6897..6899
+                                  ParenOpen@6897..6898 "("
+                                  ParenClose@6898..6899 ")"
+                            ParenClose@6899..6900 ")"
+                            Whitespace@6900..6913 "\n            "
+                  BraceClose@6913..6914 "}"
+                  Whitespace@6914..6927 "\n            "
+            Statement@6927..7020
+              Function@6927..7020
+                Function@6927..6935 "function"
+                Whitespace@6935..6936 " "
+                Identifier@6936..6955 "revertIfZeroAddress"
+                Arguments@6955..6962
+                  ParenOpen@6955..6956 "("
+                  Identifiers@6956..6960
+                    Identifier@6956..6960 "addr"
+                  ParenClose@6960..6961 ")"
+                  Whitespace@6961..6962 " "
+                Returns@6962..6962
+                Block@6962..7020
+                  BraceOpen@6962..6963 "{"
+                  Whitespace@6963..6980 "\n                "
+                  Statement@6980..7006
+                    Expression@6980..7006
+                      Call@6980..7006
+                        Identifier@6980..6987 "require"
+                        Arguments@6987..7006
+                          ParenOpen@6987..6988 "("
+                          Expression@6988..6992
+                            Identifier@6988..6992 "addr"
+                          ParenClose@6992..6993 ")"
+                          Whitespace@6993..7006 "\n            "
+                  BraceClose@7006..7007 "}"
+                  Whitespace@7007..7020 "\n            "
+            Statement@7020..7126
+              Function@7020..7126
+                Function@7020..7028 "function"
+                Whitespace@7028..7029 " "
+                Identifier@7029..7036 "require"
+                Arguments@7036..7048
+                  ParenOpen@7036..7037 "("
+                  Identifiers@7037..7046
+                    Identifier@7037..7046 "condition"
+                  ParenClose@7046..7047 ")"
+                  Whitespace@7047..7048 " "
+                Returns@7048..7048
+                Block@7048..7126
+                  BraceOpen@7048..7049 "{"
+                  Whitespace@7049..7066 "\n                "
+                  Statement@7066..7116
+                    If@7066..7116
+                      If@7066..7068 "if"
+                      Whitespace@7068..7069 " "
+                      Expression@7069..7087
+                        Call@7069..7087
+                          Identifier@7069..7075 "iszero"
+                          Arguments@7075..7087
+                            ParenOpen@7075..7076 "("
+                            Expression@7076..7085
+                              Identifier@7076..7085 "condition"
+                            ParenClose@7085..7086 ")"
+                            Whitespace@7086..7087 " "
+                      Block@7087..7116
+                        BraceOpen@7087..7088 "{"
+                        Whitespace@7088..7089 " "
+                        Statement@7089..7102
+                          Expression@7089..7102
+                            Call@7089..7102
+                              Identifier@7089..7095 "revert"
+                              Arguments@7095..7102
+                                ParenOpen@7095..7096 "("
+                                Expression@7096..7097
+                                  Literal@7096..7097
+                                    LiteralInt@7096..7097 "0"
+                                Comma@7097..7098 ","
+                                Whitespace@7098..7099 " "
+                                Expression@7099..7100
+                                  Literal@7099..7100
+                                    LiteralInt@7099..7100 "0"
+                                ParenClose@7100..7101 ")"
+                                Whitespace@7101..7102 " "
+                        BraceClose@7102..7103 "}"
+                        Whitespace@7103..7116 "\n            "
+                  BraceClose@7116..7117 "}"
+                  Whitespace@7117..7126 "\n        "
+            BraceClose@7126..7127 "}"
+            Whitespace@7127..7132 "\n    "
+        BraceClose@7132..7133 "}"
+        Whitespace@7133..7134 "\n"
+      BraceClose@7134..7135 "}"
+      Whitespace@7135..7136 "\n"

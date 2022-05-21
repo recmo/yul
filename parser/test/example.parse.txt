@@ -1,0 +1,537 @@
+Root@0..2151
+  File@0..2151
+    LineComment@0..71 "// A contract consist ..."
+    Whitespace@71..72 "\n"
+    LineComment@72..132 "// the code to be dep ..."
+    Whitespace@132..133 "\n"
+    LineComment@133..196 "// The single \"code\"  ..."
+    Whitespace@196..197 "\n"
+    LineComment@197..260 "// Every (other) name ..."
+    Whitespace@260..261 "\n"
+    LineComment@261..346 "// made accessible to ..."
+    Whitespace@346..347 "\n"
+    LineComment@347..422 "// The current object ..."
+    Whitespace@422..423 "\n"
+    LineComment@423..439 "// are in scope."
+    Whitespace@439..440 "\n"
+    Object@440..2151
+      Object@440..446 "object"
+      Whitespace@446..447 " "
+      LiteralString@447..458 "\"Contract1\""
+      Whitespace@458..459 " "
+      BraceOpen@459..460 "{"
+      Whitespace@460..465 "\n    "
+      LineComment@465..513 "// This is the constr ..."
+      Whitespace@513..518 "\n    "
+      Code@518..1426
+        Code@518..522 "code"
+        Whitespace@522..523 " "
+        Block@523..1426
+          BraceOpen@523..524 "{"
+          Whitespace@524..533 "\n        "
+          Statement@533..736
+            Function@533..736
+              Function@533..541 "function"
+              Whitespace@541..542 " "
+              Identifier@542..550 "allocate"
+              Arguments@550..557
+                ParenOpen@550..551 "("
+                Identifiers@551..555
+                  Identifier@551..555 "size"
+                ParenClose@555..556 ")"
+                Whitespace@556..557 " "
+              Returns@557..564
+                Returns@557..559 "->"
+                Whitespace@559..560 " "
+                Identifiers@560..564
+                  Identifier@560..563 "ptr"
+                  Whitespace@563..564 " "
+              Block@564..736
+                BraceOpen@564..565 "{"
+                Whitespace@565..578 "\n            "
+                Statement@578..609
+                  Assignment@578..609
+                    Identifiers@578..582
+                      Identifier@578..581 "ptr"
+                      Whitespace@581..582 " "
+                    Assign@582..584 ":="
+                    Whitespace@584..585 " "
+                    Expression@585..609
+                      Call@585..609
+                        Identifier@585..590 "mload"
+                        Arguments@590..609
+                          ParenOpen@590..591 "("
+                          Expression@591..595
+                            Literal@591..595
+                              LiteralHex@591..595 "0x40"
+                          ParenClose@595..596 ")"
+                          Whitespace@596..609 "\n            "
+                Statement@609..652
+                  If@609..652
+                    If@609..611 "if"
+                    Whitespace@611..612 " "
+                    Expression@612..624
+                      Call@612..624
+                        Identifier@612..618 "iszero"
+                        Arguments@618..624
+                          ParenOpen@618..619 "("
+                          Expression@619..622
+                            Identifier@619..622 "ptr"
+                          ParenClose@622..623 ")"
+                          Whitespace@623..624 " "
+                    Block@624..652
+                      BraceOpen@624..625 "{"
+                      Whitespace@625..626 " "
+                      Statement@626..638
+                        Assignment@626..638
+                          Identifiers@626..630
+                            Identifier@626..629 "ptr"
+                            Whitespace@629..630 " "
+                          Assign@630..632 ":="
+                          Whitespace@632..633 " "
+                          Expression@633..638
+                            Literal@633..638
+                              LiteralHex@633..637 "0x60"
+                              Whitespace@637..638 " "
+                      BraceClose@638..639 "}"
+                      Whitespace@639..652 "\n            "
+                Statement@652..689
+                  Expression@652..689
+                    Call@652..689
+                      Identifier@652..658 "mstore"
+                      Arguments@658..689
+                        ParenOpen@658..659 "("
+                        Expression@659..663
+                          Literal@659..663
+                            LiteralHex@659..663 "0x40"
+                        Comma@663..664 ","
+                        Whitespace@664..665 " "
+                        Expression@665..679
+                          Call@665..679
+                            Identifier@665..668 "add"
+                            Arguments@668..679
+                              ParenOpen@668..669 "("
+                              Expression@669..672
+                                Identifier@669..672 "ptr"
+                              Comma@672..673 ","
+                              Whitespace@673..674 " "
+                              Expression@674..678
+                                Identifier@674..678 "size"
+                              ParenClose@678..679 ")"
+                        ParenClose@679..680 ")"
+                        Whitespace@680..689 "\n        "
+                BraceClose@689..690 "}"
+                Whitespace@690..700 "\n\n        "
+                LineComment@700..727 "// first create \"Cont ..."
+                Whitespace@727..736 "\n        "
+          Statement@736..778
+            Let@736..778
+              Let@736..739 "let"
+              Whitespace@739..740 " "
+              Identifiers@740..745
+                Identifier@740..744 "size"
+                Whitespace@744..745 " "
+              Assign@745..747 ":="
+              Whitespace@747..748 " "
+              Expression@748..778
+                Call@748..778
+                  Identifier@748..756 "datasize"
+                  Arguments@756..778
+                    ParenOpen@756..757 "("
+                    Expression@757..768
+                      Literal@757..768
+                        LiteralString@757..768 "\"Contract2\""
+                    ParenClose@768..769 ")"
+                    Whitespace@769..778 "\n        "
+          Statement@778..863
+            Let@778..863
+              Let@778..781 "let"
+              Whitespace@781..782 " "
+              Identifiers@782..789
+                Identifier@782..788 "offset"
+                Whitespace@788..789 " "
+              Assign@789..791 ":="
+              Whitespace@791..792 " "
+              Expression@792..863
+                Call@792..863
+                  Identifier@792..800 "allocate"
+                  Arguments@800..863
+                    ParenOpen@800..801 "("
+                    Expression@801..805
+                      Identifier@801..805 "size"
+                    ParenClose@805..806 ")"
+                    Whitespace@806..815 "\n        "
+                    LineComment@815..854 "// This will turn int ..."
+                    Whitespace@854..863 "\n        "
+          Statement@863..978
+            Expression@863..978
+              Call@863..978
+                Identifier@863..871 "datacopy"
+                Arguments@871..978
+                  ParenOpen@871..872 "("
+                  Expression@872..878
+                    Identifier@872..878 "offset"
+                  Comma@878..879 ","
+                  Whitespace@879..880 " "
+                  Expression@880..903
+                    Call@880..903
+                      Identifier@880..890 "dataoffset"
+                      Arguments@890..903
+                        ParenOpen@890..891 "("
+                        Expression@891..902
+                          Literal@891..902
+                            LiteralString@891..902 "\"Contract2\""
+                        ParenClose@902..903 ")"
+                  Comma@903..904 ","
+                  Whitespace@904..905 " "
+                  Expression@905..909
+                    Identifier@905..909 "size"
+                  ParenClose@909..910 ")"
+                  Whitespace@910..919 "\n        "
+                  LineComment@919..969 "// constructor parame ..."
+                  Whitespace@969..978 "\n        "
+          Statement@978..1020
+            Expression@978..1020
+              Call@978..1020
+                Identifier@978..984 "mstore"
+                Arguments@984..1020
+                  ParenOpen@984..985 "("
+                  Expression@985..1002
+                    Call@985..1002
+                      Identifier@985..988 "add"
+                      Arguments@988..1002
+                        ParenOpen@988..989 "("
+                        Expression@989..995
+                          Identifier@989..995 "offset"
+                        Comma@995..996 ","
+                        Whitespace@996..997 " "
+                        Expression@997..1001
+                          Identifier@997..1001 "size"
+                        ParenClose@1001..1002 ")"
+                  Comma@1002..1003 ","
+                  Whitespace@1003..1004 " "
+                  Expression@1004..1010
+                    Literal@1004..1010
+                      LiteralHex@1004..1010 "0x1234"
+                  ParenClose@1010..1011 ")"
+                  Whitespace@1011..1020 "\n        "
+          Statement@1020..1174
+            Expression@1020..1174
+              Call@1020..1174
+                Identifier@1020..1023 "pop"
+                Arguments@1023..1174
+                  ParenOpen@1023..1024 "("
+                  Expression@1024..1056
+                    Call@1024..1056
+                      Identifier@1024..1030 "create"
+                      Arguments@1030..1056
+                        ParenOpen@1030..1031 "("
+                        Expression@1031..1037
+                          Identifier@1031..1037 "offset"
+                        Comma@1037..1038 ","
+                        Whitespace@1038..1039 " "
+                        Expression@1039..1052
+                          Call@1039..1052
+                            Identifier@1039..1042 "add"
+                            Arguments@1042..1052
+                              ParenOpen@1042..1043 "("
+                              Expression@1043..1047
+                                Identifier@1043..1047 "size"
+                              Comma@1047..1048 ","
+                              Whitespace@1048..1049 " "
+                              Expression@1049..1051
+                                Literal@1049..1051
+                                  LiteralInt@1049..1051 "32"
+                              ParenClose@1051..1052 ")"
+                        Comma@1052..1053 ","
+                        Whitespace@1053..1054 " "
+                        Expression@1054..1055
+                          Literal@1054..1055
+                            LiteralInt@1054..1055 "0"
+                        ParenClose@1055..1056 ")"
+                  ParenClose@1056..1057 ")"
+                  Whitespace@1057..1067 "\n\n        "
+                  LineComment@1067..1114 "// now return the run ..."
+                  Whitespace@1114..1123 "\n        "
+                  LineComment@1123..1165 "// executing code is  ..."
+                  Whitespace@1165..1174 "\n        "
+          Statement@1174..1210
+            Assignment@1174..1210
+              Identifiers@1174..1179
+                Identifier@1174..1178 "size"
+                Whitespace@1178..1179 " "
+              Assign@1179..1181 ":="
+              Whitespace@1181..1182 " "
+              Expression@1182..1210
+                Call@1182..1210
+                  Identifier@1182..1190 "datasize"
+                  Arguments@1190..1210
+                    ParenOpen@1190..1191 "("
+                    Expression@1191..1200
+                      Literal@1191..1200
+                        LiteralString@1191..1200 "\"runtime\""
+                    ParenClose@1200..1201 ")"
+                    Whitespace@1201..1210 "\n        "
+          Statement@1210..1340
+            Assignment@1210..1340
+              Identifiers@1210..1217
+                Identifier@1210..1216 "offset"
+                Whitespace@1216..1217 " "
+              Assign@1217..1219 ":="
+              Whitespace@1219..1220 " "
+              Expression@1220..1340
+                Call@1220..1340
+                  Identifier@1220..1228 "allocate"
+                  Arguments@1228..1340
+                    ParenOpen@1228..1229 "("
+                    Expression@1229..1233
+                      Identifier@1229..1233 "size"
+                    ParenClose@1233..1234 ")"
+                    Whitespace@1234..1243 "\n        "
+                    LineComment@1243..1301 "// This will turn int ..."
+                    Whitespace@1301..1310 "\n        "
+                    LineComment@1310..1331 "// a codecopy for EVM"
+                    Whitespace@1331..1340 "\n        "
+          Statement@1340..1394
+            Expression@1340..1394
+              Call@1340..1394
+                Identifier@1340..1348 "datacopy"
+                Arguments@1348..1394
+                  ParenOpen@1348..1349 "("
+                  Expression@1349..1355
+                    Identifier@1349..1355 "offset"
+                  Comma@1355..1356 ","
+                  Whitespace@1356..1357 " "
+                  Expression@1357..1378
+                    Call@1357..1378
+                      Identifier@1357..1367 "dataoffset"
+                      Arguments@1367..1378
+                        ParenOpen@1367..1368 "("
+                        Expression@1368..1377
+                          Literal@1368..1377
+                            LiteralString@1368..1377 "\"runtime\""
+                        ParenClose@1377..1378 ")"
+                  Comma@1378..1379 ","
+                  Whitespace@1379..1380 " "
+                  Expression@1380..1384
+                    Identifier@1380..1384 "size"
+                  ParenClose@1384..1385 ")"
+                  Whitespace@1385..1394 "\n        "
+          Statement@1394..1419
+            Expression@1394..1419
+              Call@1394..1419
+                Identifier@1394..1400 "return"
+                Arguments@1400..1419
+                  ParenOpen@1400..1401 "("
+                  Expression@1401..1407
+                    Identifier@1401..1407 "offset"
+                  Comma@1407..1408 ","
+                  Whitespace@1408..1409 " "
+                  Expression@1409..1413
+                    Identifier@1409..1413 "size"
+                  ParenClose@1413..1414 ")"
+                  Whitespace@1414..1419 "\n    "
+          BraceClose@1419..1420 "}"
+          Whitespace@1420..1426 "\n\n    "
+      Data@1426..1455
+        Data@1426..1430 "data"
+        Whitespace@1430..1431 " "
+        LiteralString@1431..1439 "\"Table2\""
+        Whitespace@1439..1440 " "
+        LiteralStringHex@1440..1449 "hex\"4123\""
+        Whitespace@1449..1455 "\n\n    "
+      Object@1455..1931
+        Object@1455..1461 "object"
+        Whitespace@1461..1462 " "
+        LiteralString@1462..1471 "\"runtime\""
+        Whitespace@1471..1472 " "
+        BraceOpen@1472..1473 "{"
+        Whitespace@1473..1482 "\n        "
+        Code@1482..1786
+          Code@1482..1486 "code"
+          Whitespace@1486..1487 " "
+          Block@1487..1786
+            BraceOpen@1487..1488 "{"
+            Whitespace@1488..1501 "\n            "
+            Statement@1501..1717
+              Function@1501..1717
+                Function@1501..1509 "function"
+                Whitespace@1509..1510 " "
+                Identifier@1510..1518 "allocate"
+                Arguments@1518..1525
+                  ParenOpen@1518..1519 "("
+                  Identifiers@1519..1523
+                    Identifier@1519..1523 "size"
+                  ParenClose@1523..1524 ")"
+                  Whitespace@1524..1525 " "
+                Returns@1525..1532
+                  Returns@1525..1527 "->"
+                  Whitespace@1527..1528 " "
+                  Identifiers@1528..1532
+                    Identifier@1528..1531 "ptr"
+                    Whitespace@1531..1532 " "
+                Block@1532..1717
+                  BraceOpen@1532..1533 "{"
+                  Whitespace@1533..1550 "\n                "
+                  Statement@1550..1585
+                    Assignment@1550..1585
+                      Identifiers@1550..1554
+                        Identifier@1550..1553 "ptr"
+                        Whitespace@1553..1554 " "
+                      Assign@1554..1556 ":="
+                      Whitespace@1556..1557 " "
+                      Expression@1557..1585
+                        Call@1557..1585
+                          Identifier@1557..1562 "mload"
+                          Arguments@1562..1585
+                            ParenOpen@1562..1563 "("
+                            Expression@1563..1567
+                              Literal@1563..1567
+                                LiteralHex@1563..1567 "0x40"
+                            ParenClose@1567..1568 ")"
+                            Whitespace@1568..1585 "\n                "
+                  Statement@1585..1632
+                    If@1585..1632
+                      If@1585..1587 "if"
+                      Whitespace@1587..1588 " "
+                      Expression@1588..1600
+                        Call@1588..1600
+                          Identifier@1588..1594 "iszero"
+                          Arguments@1594..1600
+                            ParenOpen@1594..1595 "("
+                            Expression@1595..1598
+                              Identifier@1595..1598 "ptr"
+                            ParenClose@1598..1599 ")"
+                            Whitespace@1599..1600 " "
+                      Block@1600..1632
+                        BraceOpen@1600..1601 "{"
+                        Whitespace@1601..1602 " "
+                        Statement@1602..1614
+                          Assignment@1602..1614
+                            Identifiers@1602..1606
+                              Identifier@1602..1605 "ptr"
+                              Whitespace@1605..1606 " "
+                            Assign@1606..1608 ":="
+                            Whitespace@1608..1609 " "
+                            Expression@1609..1614
+                              Literal@1609..1614
+                                LiteralHex@1609..1613 "0x60"
+                                Whitespace@1613..1614 " "
+                        BraceClose@1614..1615 "}"
+                        Whitespace@1615..1632 "\n                "
+                  Statement@1632..1673
+                    Expression@1632..1673
+                      Call@1632..1673
+                        Identifier@1632..1638 "mstore"
+                        Arguments@1638..1673
+                          ParenOpen@1638..1639 "("
+                          Expression@1639..1643
+                            Literal@1639..1643
+                              LiteralHex@1639..1643 "0x40"
+                          Comma@1643..1644 ","
+                          Whitespace@1644..1645 " "
+                          Expression@1645..1659
+                            Call@1645..1659
+                              Identifier@1645..1648 "add"
+                              Arguments@1648..1659
+                                ParenOpen@1648..1649 "("
+                                Expression@1649..1652
+                                  Identifier@1649..1652 "ptr"
+                                Comma@1652..1653 ","
+                                Whitespace@1653..1654 " "
+                                Expression@1654..1658
+                                  Identifier@1654..1658 "size"
+                                ParenClose@1658..1659 ")"
+                          ParenClose@1659..1660 ")"
+                          Whitespace@1660..1673 "\n            "
+                  BraceClose@1673..1674 "}"
+                  Whitespace@1674..1688 "\n\n            "
+                  LineComment@1688..1703 "// runtime code"
+                  Whitespace@1703..1717 "\n\n            "
+            Statement@1717..1756
+              Expression@1717..1756
+                Call@1717..1756
+                  Identifier@1717..1723 "mstore"
+                  Arguments@1723..1756
+                    ParenOpen@1723..1724 "("
+                    Expression@1724..1725
+                      Literal@1724..1725
+                        LiteralInt@1724..1725 "0"
+                    Comma@1725..1726 ","
+                    Whitespace@1726..1727 " "
+                    Expression@1727..1742
+                      Literal@1727..1742
+                        LiteralString@1727..1742 "\"Hello, World!\""
+                    ParenClose@1742..1743 ")"
+                    Whitespace@1743..1756 "\n            "
+            Statement@1756..1780
+              Expression@1756..1780
+                Call@1756..1780
+                  Identifier@1756..1762 "return"
+                  Arguments@1762..1780
+                    ParenOpen@1762..1763 "("
+                    Expression@1763..1764
+                      Literal@1763..1764
+                        LiteralInt@1763..1764 "0"
+                    Comma@1764..1765 ","
+                    Whitespace@1765..1766 " "
+                    Expression@1766..1770
+                      Literal@1766..1770
+                        LiteralHex@1766..1770 "0x20"
+                    ParenClose@1770..1771 ")"
+                    Whitespace@1771..1780 "\n        "
+            BraceClose@1780..1781 "}"
+            Whitespace@1781..1786 "\n    "
+        BraceClose@1786..1787 "}"
+        Whitespace@1787..1793 "\n\n    "
+        LineComment@1793..1864 "// Embedded object. U ..."
+        Whitespace@1864..1869 "\n    "
+        LineComment@1869..1926 "// and Contract2 is t ..."
+        Whitespace@1926..1931 "\n    "
+      Object@1931..2149
+        Object@1931..1937 "object"
+        Whitespace@1937..1938 " "
+        LiteralString@1938..1949 "\"Contract2\""
+        Whitespace@1949..1950 " "
+        BraceOpen@1950..1951 "{"
+        Whitespace@1951..1960 "\n        "
+        Code@1960..2015
+          Code@1960..1964 "code"
+          Whitespace@1964..1965 " "
+          Block@1965..2015
+            BraceOpen@1965..1966 "{"
+            Whitespace@1966..1979 "\n            "
+            LineComment@1979..1995 "// code here ..."
+            Whitespace@1995..2004 "\n        "
+            BraceClose@2004..2005 "}"
+            Whitespace@2005..2015 "\n\n        "
+        Object@2015..2119
+          Object@2015..2021 "object"
+          Whitespace@2021..2022 " "
+          LiteralString@2022..2031 "\"runtime\""
+          Whitespace@2031..2032 " "
+          BraceOpen@2032..2033 "{"
+          Whitespace@2033..2046 "\n            "
+          Code@2046..2108
+            Code@2046..2050 "code"
+            Whitespace@2050..2051 " "
+            Block@2051..2108
+              BraceOpen@2051..2052 "{"
+              Whitespace@2052..2069 "\n                "
+              LineComment@2069..2085 "// code here ..."
+              Whitespace@2085..2098 "\n            "
+              BraceClose@2098..2099 "}"
+              Whitespace@2099..2108 "\n        "
+          BraceClose@2108..2109 "}"
+          Whitespace@2109..2119 "\n\n        "
+        Data@2119..2147
+          Data@2119..2123 "data"
+          Whitespace@2123..2124 " "
+          LiteralString@2124..2132 "\"Table1\""
+          Whitespace@2132..2133 " "
+          LiteralStringHex@2133..2142 "hex\"4123\""
+          Whitespace@2142..2147 "\n    "
+        BraceClose@2147..2148 "}"
+        Whitespace@2148..2149 "\n"
+      BraceClose@2149..2150 "}"
+      Whitespace@2150..2151 "\n"

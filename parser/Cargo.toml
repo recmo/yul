@@ -1,0 +1,30 @@
+[package]
+name = "yul-parser"
+description = "Yul language parser"
+version = "0.0.1"
+authors = ["Remco Bloemen <remco@wicked.ventures>"]
+repository = "https://github.com/recmo/yul"
+keywords = ["ethereum", "yul"]
+categories = ["blockchain"]
+readme = "Readme.md"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+hex = "0.4.2"
+log = "0.4.11"
+logos = "0.11.4"
+rowan = { version = "0.10.0", features = ["serde1"] }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0.22"
+zkp-u256 = "0.2.0"
+num-derive = "0.3.3"
+num-traits = "0.2.14"
+
+[dev-dependencies]
+criterion = "0.3.3"
+serde_json = "1.0.59"
+
+[[bench]]
+name = "criterion"
+harness = false
