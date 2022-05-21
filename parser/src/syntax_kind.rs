@@ -39,7 +39,7 @@ impl FromPrimitive for SyntaxKind {
         match (n & 1, n / 2) {
             (0, n) => Token::from_i64(n).map(SyntaxKind::Token),
             (1, n) => Node::from_i64(n).map(SyntaxKind::Node),
-            _ => unreachable!()
+            _ => unreachable!(),
         }
     }
 
@@ -47,7 +47,7 @@ impl FromPrimitive for SyntaxKind {
         match (n & 1, n / 2) {
             (0, n) => Token::from_u64(n).map(SyntaxKind::Token),
             (1, n) => Node::from_u64(n).map(SyntaxKind::Node),
-            _ => unreachable!()
+            _ => unreachable!(),
         }
     }
 }

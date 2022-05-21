@@ -7,8 +7,8 @@ repository = "https://github.com/recmo/yul"
 keywords = ["ethereum", "yul", "lsp"]
 categories = ["blockchain"]
 readme = "Readme.md"
-license = "Apache-2.0"
-edition = "2018"
+license = "MIT"
+edition = "2021"
 
 [dependencies]
 anyhow = "1.0.34"

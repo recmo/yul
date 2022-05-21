@@ -1,7 +1,7 @@
 [package]
 name = "yul-parser"
 description = "Yul language parser"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["Remco Bloemen <remco@wicked.ventures>"]
 repository = "https://github.com/recmo/yul"
 keywords = ["ethereum", "yul"]

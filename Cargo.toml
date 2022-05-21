@@ -11,3 +11,11 @@ keywords = ["ethereum", "yul", "compiler"]
 readme = "Readme.md"
 license = "MIT"
 
+[workspace]
+members = [
+    "parser",
+    "language-server",
+]
+
+[dependencies]
+yul-parser = { path = "parser" }
