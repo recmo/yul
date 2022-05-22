@@ -10,7 +10,7 @@
 
 ## Parsing
 
-The parser uses [Logos][https://docs.rs/logos/latest/logos] for tokenization and [Rowan][https://docs.rs/rowan/latest/rowan] for a parsing. The tokens (aka lexer) are defined in the [token.rs][./src/tokens.rs] and the syntax (aka grammar) is defined in [syntax.rs][./src/syntax.rs].
+The parser uses [Logos](https://docs.rs/logos/latest/logos) for tokenization and [Rowan](https://docs.rs/rowan/latest/rowan) for a parsing. The tokens (aka lexer) are defined in the [token.rs](./parser/src/token.rs) and the syntax (aka grammar) is defined in [syntax.rs](./parser/src/syntax.rs).
 
 The architecture is based on that of [rust-analyzer]. In fact, `rowan` is part of the rust-analyzer project. I recommend reading their [write-up][ra-writeup] to understand `rowan`. Another great introduction is [this tutorial][rowan-tut] by Luna Razzaghipour.
 
