@@ -1,9 +1,5 @@
-//! Yul parser
-//!
-//! See <https://solidity.readthedocs.io/en/v0.7.3/yul.html#specification-of-yul>
-
-// Following <https://arzg.github.io/lang/10/>
-// <https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/syntax.md>
+#![doc = include_str!("../Readme.md")]
+#![warn(clippy::all, clippy::pedantic, clippy::cargo, clippy::nursery)]
 
 // pub mod ast;
 // mod ir;

@@ -1,3 +1,6 @@
+#![doc = include_str!("../Readme.md")]
+#![warn(clippy::all, clippy::pedantic, clippy::cargo, clippy::nursery)]
+
 use anyhow::Result;
 use flexi_logger::{LogTarget, Logger};
 use log::{debug, info};
@@ -6,30 +9,8 @@ use lsp_types::{
     request::GotoDefinition, GotoDefinitionResponse, InitializeParams, ServerCapabilities,
 };
 
-fn main() -> Result<()> {
-    // Note that  we must have our logging only write out to stderr.
-    Logger::with_env()
-        .log_target(LogTarget::StdErr)
-        .start()
-        .unwrap();
-
-    info!("starting Yul LSP server");
-
-    // Create the transport. Includes the stdio (stdin and stdout) versions but this
-    // could also be implemented to use sockets or HTTP.
-    let (connection, io_threads) = Connection::stdio();
-
-    // Run the server and wait for the two threads to end (typically by trigger LSP
-    // Exit event).
-    let server_capabilities = serde_json::to_value(&ServerCapabilities::default()).unwrap();
-    let initialization_params = connection.initialize(server_capabilities)?;
-    main_loop(&connection, initialization_params)?;
-    io_threads.join()?;
-
-    // Shut down gracefully.
-    info!("shutting down server");
-    Ok(())
-}
+#[derive(Clone, Debug, StructOpt)]
+struct Options {}
 
 fn main_loop(connection: &Connection, params: serde_json::Value) -> Result<()> {
     let _params: InitializeParams = serde_json::from_value(params).unwrap();
@@ -76,4 +57,33 @@ where
     R::Params: serde::de::DeserializeOwned,
 {
     req.extract(R::METHOD)
+}
+
+async fn app(options: Options) -> Result<()> {
+    // Note that  we must have our logging only write out to stderr.
+    Logger::with_env()
+        .log_target(LogTarget::StdErr)
+        .start()
+        .unwrap();
+
+    info!("starting Yul LSP server");
+
+    // Create the transport. Includes the stdio (stdin and stdout) versions but this
+    // could also be implemented to use sockets or HTTP.
+    let (connection, io_threads) = Connection::stdio();
+
+    // Run the server and wait for the two threads to end (typically by trigger LSP
+    // Exit event).
+    let server_capabilities = serde_json::to_value(&ServerCapabilities::default()).unwrap();
+    let initialization_params = connection.initialize(server_capabilities)?;
+    main_loop(&connection, initialization_params)?;
+    io_threads.join()?;
+
+    // Shut down gracefully.
+    info!("shutting down server");
+    Ok(())
+}
+
+fn main() {
+    cli_batteries::run(version!(), app);
 }

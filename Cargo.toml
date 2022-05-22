@@ -14,8 +14,22 @@ license = "MIT"
 [workspace]
 members = [
     "parser",
+    "compiler",
     "language-server",
 ]
 
 [dependencies]
 yul-parser = { path = "parser" }
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
+overflow-checks = true
+strip = true
+
+# Compilation profile for any non-workspace member.
+# Dependencies are optimized, even in a dev build. This improves dev performance
+# while having neglible impact on incremental build times.
+[profile.dev.package."*"]
+opt-level = 3
