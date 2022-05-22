@@ -6,8 +6,8 @@ edition = "2021"
 homepage = "https://github.com/recmo/yul"
 repository = "https://github.com/recmo/yul"
 description = "Yul language tools"
-categories = ["cryptography::cryptocurrencies"]
-keywords = ["ethereum", "yul", "compiler"]
+keywords = ["ethereum", "yul", "compiler", "evm"]
+categories = ["compilers", "cryptography::cryptocurrencies"]
 readme = "Readme.md"
 license = "MIT"
 
