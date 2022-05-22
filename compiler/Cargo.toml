@@ -1,7 +1,7 @@
 [package]
 name = "yulc"
 description = "Yul compiler"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Remco Bloemen <remco@wicked.ventures>"]
 repository = "https://github.com/recmo/yul"
 keywords = ["ethereum", "yul"]
