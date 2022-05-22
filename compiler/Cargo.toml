@@ -11,16 +11,15 @@ license = "MIT"
 edition = "2021"
 
 [dependencies]
-cli-batteries = { path = "../../cli-batteries", features = [ "rand", "rayon" ] }
+cli-batteries = { version = "0.1.1", features = [ "rand", "rayon" ] }
 tokio = { version = "1.18", features = [ "fs", "io-util" ] }
 structopt = "0.3"
 eyre = "0.6"
-
-yul-parser = { path = "../parser" }
+yul = { version = "0.1.0", path = ".." }
 
 [dev-dependencies]
 proptest = { version = "1.0" }
 tracing-test = "0.2"
 
 [build-dependencies]
-cli-batteries = { path = "../../cli-batteries" }
+cli-batteries = "0.1.1"

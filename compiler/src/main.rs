@@ -6,7 +6,7 @@ use eyre::Result;
 use std::path::PathBuf;
 use structopt::StructOpt;
 use tokio::{fs::File, io::AsyncReadExt};
-use yul_parser::parse;
+use yul::parser::parse;
 
 #[derive(Clone, Debug, StructOpt)]
 struct Options {

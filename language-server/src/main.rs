@@ -1,13 +1,14 @@
 #![doc = include_str!("../Readme.md")]
 #![warn(clippy::all, clippy::pedantic, clippy::cargo, clippy::nursery)]
 
-use anyhow::Result;
-use flexi_logger::{LogTarget, Logger};
-use log::{debug, info};
+use cli_batteries::version;
+use eyre::Result;
 use lsp_server::{Connection, Message, Request, RequestId, Response};
 use lsp_types::{
     request::GotoDefinition, GotoDefinitionResponse, InitializeParams, ServerCapabilities,
 };
+use structopt::StructOpt;
+use tracing::{debug, info};
 
 #[derive(Clone, Debug, StructOpt)]
 struct Options {}
@@ -60,16 +61,11 @@ where
 }
 
 async fn app(options: Options) -> Result<()> {
-    // Note that  we must have our logging only write out to stderr.
-    Logger::with_env()
-        .log_target(LogTarget::StdErr)
-        .start()
-        .unwrap();
-
     info!("starting Yul LSP server");
 
     // Create the transport. Includes the stdio (stdin and stdout) versions but this
     // could also be implemented to use sockets or HTTP.
+    // TODO: Implement using Toktio sockets
     let (connection, io_threads) = Connection::stdio();
 
     // Run the server and wait for the two threads to end (typically by trigger LSP
@@ -78,9 +74,6 @@ async fn app(options: Options) -> Result<()> {
     let initialization_params = connection.initialize(server_capabilities)?;
     main_loop(&connection, initialization_params)?;
     io_threads.join()?;
-
-    // Shut down gracefully.
-    info!("shutting down server");
     Ok(())
 }
 
