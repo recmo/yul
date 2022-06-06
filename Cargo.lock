@@ -172,9 +172,9 @@ dependencies = [
 
 [[package]]
 name = "cli-batteries"
-version = "0.1.1"
+version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c7e3195eb0dcdb9173cfd721b7df0dfbddd80f35fde20d569aab62b92585159"
+checksum = "989342049d1076103be56cf2fc62a3da5b2231f7ec14eeeb29d208f3bc9b63dd"
 dependencies = [
  "chrono",
  "color-eyre",
@@ -193,6 +193,7 @@ dependencies = [
  "time 0.3.9",
  "tokio",
  "tracing",
+ "tracing-error",
  "tracing-futures",
  "tracing-subscriber",
  "users",
@@ -756,9 +757,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.11.0"
+version = "1.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b10983b38c53aebdf33f542c6275b0f58a238129d00c4ae0e6fb59738d783ca"
+checksum = "7709cef83f0c1f58f666e746a08b21e0085f7440fa6a29cc194d68aac97a4225"
 
 [[package]]
 name = "oorandom"
