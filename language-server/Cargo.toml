@@ -11,7 +11,7 @@ license = "MIT"
 edition = "2021"
 
 [dependencies]
-cli-batteries = "0.1.1"
+cli-batteries = "0.3.2"
 tokio = { version = "1.18", features = [ "fs", "io-util" ] }
 structopt = "0.3"
 eyre = "0.6"
@@ -26,4 +26,4 @@ proptest = { version = "1.0" }
 tracing-test = "0.2"
 
 [build-dependencies]
-cli-batteries = { version = "0.1.1" }
+cli-batteries = { version = "0.3.2" }
