@@ -16,7 +16,7 @@ tokio = { version = "1.18", features = [ "fs", "io-util" ] }
 structopt = "0.3"
 eyre = "0.6"
 lsp-server = "0.4.1"
-lsp-types = "0.83.0"
+lsp-types = "0.93.1"
 serde = "1.0.116"
 serde_json = "1.0.59"
 tracing = "0.1.34"
